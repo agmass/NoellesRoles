@@ -1,6 +1,7 @@
 package org.agmas.noellesroles.client.mixin;
 
 import com.llamalad7.mixinextras.sugar.Local;
+import dev.doctor4t.trainmurdermystery.api.TMMRoles;
 import dev.doctor4t.trainmurdermystery.cca.GameWorldComponent;
 import dev.doctor4t.trainmurdermystery.client.TMMClient;
 import dev.doctor4t.trainmurdermystery.client.gui.RoleNameRenderer;
@@ -28,7 +29,7 @@ public abstract class CustomRolesRoleNameRendererMixin {
     private static void b(TextRenderer renderer, ClientPlayerEntity player, DrawContext context, RenderTickCounter tickCounter, CallbackInfo ci) {
          GameWorldComponent gameWorldComponent = (GameWorldComponent) GameWorldComponent.KEY.get(player.getWorld());
          if (NoellesrolesClient.hudRole != null && gameWorldComponent.getRole(player) != null) {
-             if (TMMClient.isPlayerSpectatingOrCreative() && !(!NoellesrolesClient.hudRole.isInnocent() && !gameWorldComponent.getRole(player).isInnocent())) {
+             if (TMMClient.isPlayerSpectatingOrCreative()) {
                  Text name = Text.translatable("announcement.role." + NoellesrolesClient.hudRole.identifier().getPath());
                  context.drawTextWithShadow(renderer, name, -renderer.getWidth(name) / 2, 0, NoellesrolesClient.hudRole.color() | (int) (nametagAlpha * 255.0F) << 24);
              }
@@ -39,6 +40,8 @@ public abstract class CustomRolesRoleNameRendererMixin {
         GameWorldComponent gameWorldComponent = (GameWorldComponent) GameWorldComponent.KEY.get(player.getWorld());
         if (gameWorldComponent.getRole(target) != null) {
             NoellesrolesClient.hudRole = gameWorldComponent.getRole(target);
+        } else {
+            NoellesrolesClient.hudRole = TMMRoles.CIVILIAN;
         }
     }
 }

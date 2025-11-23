@@ -27,11 +27,12 @@
   "announcement.role.noisemaker": "Noisemaker",
   "announcement.win.noisemaker": "Passengers Win!",
 
-  "announcement.goals.swapper": "Swap places with another player.",
+  "announcement.goals.swapper": "Swap placess with other players.",
   "announcement.role.swapper": "Swapper",
   "announcement.win.swapper": "Passengers Win!",
 
 
   "item.noellesroles.fake_revolver": "Fake Revolver",
+  "item.noellesroles.master_key": "Master Key",
   "item.noellesroles.fake_knife": "Fake Knife"
 }

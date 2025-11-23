@@ -26,6 +26,7 @@ import net.minecraft.text.Text;
 import net.minecraft.world.World;
 import org.agmas.noellesroles.ModItems;
 import org.agmas.noellesroles.Noellesroles;
+import org.agmas.noellesroles.config.NoellesRolesConfig;
 import org.agmas.noellesroles.morphling.MorphlingPlayerComponent;
 import org.jetbrains.annotations.NotNull;
 import org.spongepowered.asm.mixin.Mixin;
@@ -77,8 +78,9 @@ public abstract class RoleAssignerMixin {
         while (!allRolesFilled) {
             allRolesFilled = true;
             for (TMMRoles.Role moddedRole : shuffledRoles) {
+                if (NoellesRolesConfig.HANDLER.instance().disabled.contains(moddedRole.identifier().getPath())) continue;
                 if (moddedRole == TMMRoles.KILLER || moddedRole == TMMRoles.VIGILANTE || moddedRole == TMMRoles.CIVILIAN || moddedRole == TMMRoles.LOOSE_END) continue;
-                if (!moddedRole.isInnocent()) continue;
+                if (moddedRole.canUseKiller()) continue;
                 if (Noellesroles.rolePlayerCaps.containsKey(moddedRole.identifier()) && Noellesroles.rolePlayerCaps.get(moddedRole.identifier()) <= gameComponent.getAllWithRole(moddedRole).size()) continue;
                 if (gameComponent.getAllWithRole(moddedRole).size() >= desiredRoleCount) continue;
                 Collections.shuffle(playersForCivillianRoles);
@@ -101,8 +103,9 @@ public abstract class RoleAssignerMixin {
         while (!allRolesFilled) {
             allRolesFilled = true;
             for (TMMRoles.Role moddedRole : shuffledRoles) {
+                if (NoellesRolesConfig.HANDLER.instance().disabled.contains(moddedRole.identifier().getPath())) continue;
                 if (moddedRole == TMMRoles.KILLER || moddedRole == TMMRoles.VIGILANTE || moddedRole == TMMRoles.CIVILIAN || moddedRole == TMMRoles.LOOSE_END) continue;
-                if (moddedRole.isInnocent()) continue;
+                if (!moddedRole.canUseKiller()) continue;
                 if (Noellesroles.rolePlayerCaps.containsKey(moddedRole.identifier()) && Noellesroles.rolePlayerCaps.get(moddedRole.identifier()) <= gameComponent.getAllWithRole(moddedRole).size()) continue;
                 if (gameComponent.getAllWithRole(moddedRole).size() >= desiredRoleCount) continue;
                 Collections.shuffle(playersForKillerRoles);
@@ -110,6 +113,8 @@ public abstract class RoleAssignerMixin {
                 if (assignOneOfRole(moddedRole, playersForKillerRoles,gameComponent)) allRolesFilled = false;
             }
         }
+
+        Noellesroles.forceRoles.clear();
     }
 
     @Redirect(method = "initializeGame", at = @At(value = "INVOKE", target = "Lnet/fabricmc/fabric/api/networking/v1/ServerPlayNetworking;send(Lnet/minecraft/server/network/ServerPlayerEntity;Lnet/minecraft/network/packet/CustomPayload;)V", ordinal = 1))

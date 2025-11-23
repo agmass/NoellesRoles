@@ -33,8 +33,8 @@ public class MorphlingPlayerWidget extends ButtonWidget{
     }
 
     protected void renderWidget(DrawContext context, int mouseX, int mouseY, float delta) {
-        super.renderWidget(context, mouseX, mouseY, delta);
         if ((MorphlingPlayerComponent.KEY.get(MinecraftClient.getInstance().player)).getMorphTicks() == 0) {
+            super.renderWidget(context, mouseX, mouseY, delta);
             context.drawGuiTexture(ShopEntry.Type.POISON.getTexture(), this.getX() - 7, this.getY() - 7, 30, 30);
             PlayerSkinDrawer.draw(context, disguiseTarget.getSkinTextures().texture(), this.getX(), this.getY(), 16);
             if (this.isHovered()) {
@@ -45,6 +45,7 @@ public class MorphlingPlayerWidget extends ButtonWidget{
         }
 
         if ((MorphlingPlayerComponent.KEY.get(MinecraftClient.getInstance().player)).getMorphTicks() < 0) {
+            super.renderWidget(context, mouseX, mouseY, delta);
             context.setShaderColor(0.25f,0.25f,0.25f,0.5f);
             context.drawGuiTexture(ShopEntry.Type.POISON.getTexture(), this.getX() - 7, this.getY() - 7, 30, 30);
             PlayerSkinDrawer.draw(context, disguiseTarget.getSkinTextures().texture(), this.getX(), this.getY(), 16);

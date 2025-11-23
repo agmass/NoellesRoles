@@ -6,27 +6,18 @@
   "client": [
     "CustomRolesRoleNameRendererMixin",
     "InstinctMixin",
-    "killerfix.AllowKillerScreenMixin",
-    "killerfix.KillerClientMixin",
-    "killerfix.MoodRendererMixin",
     "killerfix.ShowKillerRolesAsKillerOnEndMixin",
     "morphling.MorphlingRendererMixin",
     "morphling.MorphlingRoleNameRendererMixin",
     "morphling.MorphlingScreenMixin",
     "phantom.PhantomHudMixin",
-    "swapper.SwapperScreenMixin"
+    "swapper.SwapperScreenMixin",
+    "InnocenceReliantWinTextMixin"
   ],
   "injectors": {
     "defaultRequire": 1
   },
   "overwrites": {
     "requireAnnotations": true
-  },
-  "mixins": [
-    "killerfix.CoinCounterMixin",
-    "killerfix.KillerInstinctMixin",
-    "killerfix.KillerMoodMixin",
-    "killerfix.KillerRevolverMixin",
-    "killerfix.KillerTimerMixin"
-  ]
+  }
 }

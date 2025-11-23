@@ -6,11 +6,13 @@ import dev.doctor4t.trainmurdermystery.client.gui.screen.ingame.LimitedInventory
 import net.fabricmc.loader.impl.util.log.Log;
 import net.fabricmc.loader.impl.util.log.LogCategory;
 import net.minecraft.client.MinecraftClient;
+import net.minecraft.client.gui.DrawContext;
 import net.minecraft.client.network.AbstractClientPlayerEntity;
 import net.minecraft.client.network.ClientPlayerEntity;
 import net.minecraft.entity.player.PlayerInventory;
 import net.minecraft.screen.PlayerScreenHandler;
 import net.minecraft.text.Text;
+import net.minecraft.util.Formatting;
 import org.agmas.noellesroles.Noellesroles;
 import org.agmas.noellesroles.client.MorphlingPlayerWidget;
 import org.agmas.noellesroles.client.SwapperPlayerWidget;
@@ -21,6 +23,7 @@ import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 
+import java.awt.*;
 import java.util.List;
 
 
@@ -33,13 +36,27 @@ public abstract class SwapperScreenMixin extends LimitedHandledScreen<PlayerScre
     }
 
 
-    @Inject(method = "init", at = @At("TAIL"))
-    void b(CallbackInfo ci) {
+    @Inject(method = "render", at = @At("HEAD"))
+    void a(DrawContext context, int mouseX, int mouseY, float delta, CallbackInfo ci) {
         GameWorldComponent gameWorldComponent = (GameWorldComponent) GameWorldComponent.KEY.get(player.getWorld());
-        /*if (gameWorldComponent.isRole(player,Noellesroles.SWAPPER)) {
-            Log.info(LogCategory.GENERAL, "Render Swapper");
+        if (gameWorldComponent.isRole(player,Noellesroles.SWAPPER)) {
+            int y = (((LimitedInventoryScreen)(Object)this).height - 32) / 2;
+            int x = ((LimitedInventoryScreen)(Object)this).width / 2;
+            if (SwapperPlayerWidget.playerChoiceOne == null) {
+                Text text = Text.literal("Select first player to swap");
+                context.drawTextWithShadow(MinecraftClient.getInstance().textRenderer, text, x - (MinecraftClient.getInstance().textRenderer.getWidth(text)/2), y + 40, Color.CYAN.getRGB());
+            } else {
+                Text text = Text.literal("Select second player to swap");
+                context.drawTextWithShadow(MinecraftClient.getInstance().textRenderer, text, x - (MinecraftClient.getInstance().textRenderer.getWidth(text)/2), y + 40, Color.RED.getRGB());
+            }
+        }
+    }
+    @Inject(method = "init", at = @At("HEAD"))
+    void b(CallbackInfo ci) {
+        SwapperPlayerWidget.playerChoiceOne = null;
+        GameWorldComponent gameWorldComponent = (GameWorldComponent) GameWorldComponent.KEY.get(player.getWorld());
+        if (gameWorldComponent.isRole(player,Noellesroles.SWAPPER)) {
             List<AbstractClientPlayerEntity> entries = MinecraftClient.getInstance().world.getPlayers();
-            entries.removeIf((e) -> e.getUuid().equals(player.getUuid()));
             int apart = 36;
             int x = ((LimitedInventoryScreen)(Object)this).width / 2 - (entries.size()) * apart / 2 + 9;
             int shouldBeY = (((LimitedInventoryScreen)(Object)this).height - 32) / 2;
@@ -49,7 +66,7 @@ public abstract class SwapperScreenMixin extends LimitedHandledScreen<PlayerScre
                 SwapperPlayerWidget child = new SwapperPlayerWidget(((LimitedInventoryScreen)(Object)this), x + apart * i, y, entries.get(i), i);
                 addDrawableChild(child);
             }
-        }*/
+        }
     }
 
 }

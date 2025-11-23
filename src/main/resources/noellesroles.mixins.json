@@ -5,7 +5,6 @@
   "compatibilityLevel": "JAVA_21",
   "mixins": [
     "RoleAssignerMixin",
-    "WinConditionMixin",
     "bartender.BartenderReseterMixin",
     "bartender.CocktailItemMixin",
     "host.MasterKeyDropMixin",

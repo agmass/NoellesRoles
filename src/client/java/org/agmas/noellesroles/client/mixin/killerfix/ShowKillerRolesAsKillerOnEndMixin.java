@@ -17,6 +17,8 @@ public class ShowKillerRolesAsKillerOnEndMixin {
 
     @Redirect(method = "setRoundEndData", at = @At(value = "INVOKE", target = "Ldev/doctor4t/trainmurdermystery/cca/GameWorldComponent;isRole(Lnet/minecraft/entity/player/PlayerEntity;Ldev/doctor4t/trainmurdermystery/api/TMMRoles$Role;)Z", ordinal = 0))
     private boolean a(GameWorldComponent instance, PlayerEntity player, TMMRoles.Role role) {
-        return !instance.getRole(player).isInnocent();
+        if (instance.getRole(player) == null) { return false; } else {
+            return !instance.getRole(player).canUseKiller();
+        }
     }
 }
