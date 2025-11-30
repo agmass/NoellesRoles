@@ -10,8 +10,6 @@
     "morphling.MorphlingRoleNameRendererMixin",
     "morphling.MorphlingScreenMixin",
     "phantom.PhantomHudMixin",
-    "seer.SeerHudMixin",
-    "seer.SeerResetMixin",
     "swapper.SwapperScreenMixin",
     "voodoo.VoodoScreenMixin"
   ],

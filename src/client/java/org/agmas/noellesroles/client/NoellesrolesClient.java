@@ -38,7 +38,6 @@ public class NoellesrolesClient implements ClientModInitializer {
 
     public static Map<UUID, UUID> SHUFFLED_PLAYER_ENTRIES_CACHE = Maps.newHashMap();
 
-    public static ArrayList<PlayerEntity> seer_revealedPlayers = new ArrayList<>();
 
     @Override
     public void onInitializeClient() {
@@ -63,17 +62,6 @@ public class NoellesrolesClient implements ClientModInitializer {
                 client.execute(() -> {
                     if (MinecraftClient.getInstance().player == null) return;
                     GameWorldComponent gameWorldComponent = (GameWorldComponent) GameWorldComponent.KEY.get(MinecraftClient.getInstance().player.getWorld());
-                    if (gameWorldComponent.isRole(MinecraftClient.getInstance().player, Noellesroles.SEER)) {
-                        if (target == null) return;
-                        AbilityPlayerComponent abilityPlayerComponent = (AbilityPlayerComponent) AbilityPlayerComponent.KEY.get(MinecraftClient.getInstance().player);
-                        PlayerMoodComponent moodComponent = (PlayerMoodComponent) PlayerMoodComponent.KEY.get(MinecraftClient.getInstance().player);
-                        if (moodComponent.isLowerThanMid()) return;
-                        if (abilityPlayerComponent.cooldown <= 0) {
-                            ClientPlayNetworking.send(new MorphC2SPacket(target.getUuid()));
-                            seer_revealedPlayers.add(target);
-                        }
-                        return;
-                    }
                     ClientPlayNetworking.send(new AbilityC2SPacket());
                 });
             }

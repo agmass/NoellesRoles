@@ -25,6 +25,10 @@ public class ModItems {
             new Item(new Item.Settings().maxCount(1)),
             "master_key"
     );
+    public static final Item ROLE_MINE = register(
+            new Item(new Item.Settings().maxCount(1)),
+            "role_mine"
+    );
     public static Item register(Item item, String id) {
         // Create the identifier for the item.
         Identifier itemID = Identifier.of(Noellesroles.MOD_ID, id);

@@ -48,9 +48,9 @@
   "announcement.role.executioner": "Executioner",
   "announcement.win.executioner": "Passengers Win!",
 
-  "announcement.goals.seer": "Check other player's roles.",
-  "announcement.role.seer": "Seer",
-  "announcement.win.seer": "Passengers Win!",
+  "announcement.goals.trapper": "Check other player's roles.",
+  "announcement.role.trapper": "Trapper",
+  "announcement.win.trapper": "Passengers Win!",
 
 
   "item.noellesroles.fake_revolver": "Fake Revolver",
