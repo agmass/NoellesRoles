@@ -1,0 +1,72 @@
+{
+  "announcement.goals.jester": "找到并与杀手合作。",
+  "announcement.role.jester": "狂信者",
+  "announcement.win.jester": "狂信者胜利！",
+
+  "announcement.goals.morphling": "愚弄所有人。",
+  "announcement.role.morphling": "变形者",
+  "announcement.win.morphling": "杀手胜利！",
+
+  "announcement.goals.awesome_binglus": "你有超多便条，随便写吧",
+  "announcement.role.awesome_binglus": "记者",
+  "announcement.win.awesome_binglus": "乘客胜利！",
+
+  "announcement.goals.conductor": "使用万能钥匙打开列车上的所有门！",
+  "announcement.role.conductor": "列车长",
+  "announcement.win.conductor": "乘客胜利！",
+
+  "announcement.goals.the_insane_damned_paranoid_killer": "我听得到死者的声音。",
+  "announcement.role.the_insane_damned_paranoid_killer": "亡语杀手",
+  "announcement.win.the_insane_damned_paranoid_killer": "杀手胜利！",
+
+
+  "announcement.goals.bartender": "透过墙壁看见喝酒和中毒的玩家！",
+  "announcement.role.bartender": "酒保",
+  "announcement.win.bartender": "乘客胜利！",
+
+  "announcement.goals.phantom": "化为隐形，但要小心你还有碰撞体积。",
+  "announcement.role.phantom": "幻灵",
+  "announcement.win.phantom": "杀手胜利！",
+
+  "announcement.goals.noisemaker": "在死亡时向所有人暴露你的位置。",
+  "announcement.role.noisemaker": "大嗓门",
+  "announcement.win.noisemaker": "乘客胜利！",
+
+  "announcement.goals.voodoo": "选择一名玩家，在你死时与你一起同归于尽。",
+  "announcement.role.voodoo": "巫毒师",
+  "announcement.win.voodoo": "乘客胜利！",
+
+  "announcement.goals.swapper": "与其他玩家交换位置。",
+  "announcement.role.swapper": "交换者",
+  "announcement.win.swapper": "杀手胜利！",
+
+  "announcement.goals.coroner": "从尸体上获取信息。",
+  "announcement.role.coroner": "验尸官",
+  "announcement.win.coroner": "乘客胜利！",
+  "hud.coroner.sanity_requirements": "验尸需保持50%的理智值",
+  "hud.coroner.death_info": "死于 %s秒前，死因是",
+
+  "announcement.goals.executioner": "当你的目标死于非杀手之手后，你将随机获得其他杀手身份。",
+  "announcement.role.executioner": "刽子手",
+  "announcement.win.executioner": "乘客胜利！",
+
+  "announcement.goals.trapper": "检查其他玩家的身份。",
+  "announcement.role.trapper": "检查官",
+  "announcement.win.trapper": "乘客胜利！",
+
+
+  "item.noellesroles.fake_revolver": "假左轮手枪",
+  "item.noellesroles.master_key": "万能钥匙",
+  "item.noellesroles.fake_knife": "假匕首",
+  "item.noellesroles.defense_vial": "去毒试剂",
+  "item.noellesroles.defense_vial.tooltip": "在饮料托盘上右键使用\n清除托盘上所有已施加的毒药\n让饮用该饮品的玩家额外承受一次伤害。",
+
+  "death_reason.trainmurdermystery.gun_shot": "被子弹击中。",
+  "death_reason.trainmurdermystery.knife_stab": "被刀刺死！",
+  "death_reason.trainmurdermystery.generic": "未知。",
+  "death_reason.trainmurdermystery.bat_hit": "遭受钝器重击！",
+  "death_reason.trainmurdermystery.grenade": "爆炸！",
+  "death_reason.trainmurdermystery.poison": "中毒！",
+  "death_reason.trainmurdermystery.fell_out_of_train": "被列车碾死。",
+  "death_reason.noellesroles.voodoo": "巫毒魔法。"
+}
