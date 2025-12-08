@@ -80,46 +80,4 @@
   "tip.vulture": "%s/%s 尸体数",
   "tip.recaller.not_enough_money": "需要 100\uE781 来进行传送",
   "tip.noellesroles.cooldown": "能力在 %s 秒后可用"
-}  "announcement.role.coroner": "验尸官",
-  "announcement.win.coroner": "乘客胜利！",
-  "hud.coroner.sanity_requirements": "验尸需保持50%的理智值",
-  "hud.coroner.death_info": "死于 %s秒前，死因是",
-  "hud.coroner.role_info": "他们的身份是 ",
-
-  "announcement.goals.executioner": "当你的目标死于非杀手之手后，你将随机获得其他杀手身份。",
-  "announcement.role.executioner": "刽子手",
-
-  "announcement.goals.trapper": "检查其他玩家的身份。",
-  "announcement.role.trapper": "检查官",
-
-  "announcement.goals.recaller": "传送到列车上的指定位置！",
-  "announcement.role.recaller": "回溯者",
-
-  "announcement.goals.vulture": "吃掉足够的尸体后变成杀手！",
-  "announcement.role.vulture": "秃鹫",
-  "hud.vulture.eat": "按下 %s 键来吃!",
-  "hud.vulture.already_consumed": "此尸体已经被吃掉了",
-
-
-  "item.noellesroles.fake_revolver": "假左轮手枪",
-  "item.noellesroles.master_key": "万能钥匙",
-  "item.noellesroles.fake_knife": "假匕首",
-  "item.noellesroles.defense_vial": "去毒试剂",
-  "item.noellesroles.defense_vial.tooltip": "在饮料托盘上右键使用\n清除托盘上所有已施加的毒药\n让饮用该饮品的玩家可以额外承受一次伤害。",
-
-  "death_reason.trainmurdermystery.gun_shot": "被子弹击中。",
-  "death_reason.trainmurdermystery.knife_stab": "被刀刺死！",
-  "death_reason.trainmurdermystery.generic": "未知。",
-  "death_reason.trainmurdermystery.bat_hit": "遭受钝器重击！",
-  "death_reason.trainmurdermystery.grenade": "爆炸！",
-  "death_reason.trainmurdermystery.poison": "中毒！",
-  "death_reason.trainmurdermystery.fell_out_of_train": "被列车碾死。",
-  "death_reason.noellesroles.voodoo": "巫毒魔法。",
-  
-  "tip.phantom": "按下 %s 键来隐形",
-  "tip.recaller.place": "按下 %s 键来保存你的位置！",
-  "tip.recaller.teleport": "按下 %s 键来传送到保存的位置！",
-  "tip.vulture": "已吃掉的尸体 %s/%s",
-  "tip.recaller.not_enough_money": "需要 100\uE781 来传送",
-  "tip.noellesroles.cooldown": "能力在 %ss 后可用"
 }
