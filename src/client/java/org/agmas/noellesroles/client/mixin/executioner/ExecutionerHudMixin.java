@@ -42,7 +42,8 @@ public abstract class ExecutionerHudMixin {
                 context.getMatrices().push();
                 context.getMatrices().translate((float) context.getScaledWindowWidth() / 2.0F, (float) context.getScaledWindowHeight() / 2.0F + 6.0F, 0.0F);
                 context.getMatrices().scale(0.6F, 0.6F, 1.0F);
-                Text name = Text.literal("Executioner Target: " + MinecraftClient.getInstance().player.networkHandler.getPlayerListEntry(executionerPlayerComponent.target).getProfile().getName());
+                // Text name = Text.literal("Executioner Target: " + MinecraftClient.getInstance().player.networkHandler.getPlayerListEntry(executionerPlayerComponent.target).getProfile().getName());
+                Text name = Text.translatable("hud.executioner.target", MinecraftClient.getInstance().player.networkHandler.getPlayerListEntry(executionerPlayerComponent.target).getProfile().getName())
                 context.drawTextWithShadow(renderer, name, -renderer.getWidth(name) / 2, 32, Colors.RED);
 
                 context.getMatrices().pop();

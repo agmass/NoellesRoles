@@ -35,6 +35,7 @@
   "announcement.goals.voodoo": "Выберите другого игрока, который умрёт с вами.",
   "announcement.role.voodoo": "Вуду",
   "announcement.win.voodoo": "Пассажиры победили!",
+  "hud.voodoo.deaths_must_be_triggered_by_another_player": "Причиной смерти вуду должен быть другой игрок!",
 
   "announcement.goals.swapper": "Меняйтесь местами с другими игроками.",
   "announcement.role.swapper": "Обменник",
@@ -51,6 +52,7 @@
   "announcement.goals.executioner": "Станьте убийцей, как только ваша цель умрет (от рук не-убийцы).",
   "announcement.role.executioner": "Жнец",
   "announcement.win.executioner": "Пассажиры победили!",
+  "hud.executioner.target": "Цель Жнеца: %s",
 
   "announcement.goals.seer": "Узнайте роли других игроков.",
   "announcement.role.seer": "Провидец",
