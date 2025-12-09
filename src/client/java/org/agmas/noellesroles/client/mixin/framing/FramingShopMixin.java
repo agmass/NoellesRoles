@@ -31,7 +31,7 @@ public abstract class FramingShopMixin extends LimitedHandledScreen<PlayerScreen
     }
 
     @Inject(method = "init", at = @At("HEAD"))
-    void b(CallbackInfo ci) {
+    void framingShopAddChildren(CallbackInfo ci) {
         GameWorldComponent gameWorldComponent = (GameWorldComponent) GameWorldComponent.KEY.get(player.getWorld());
         if (gameWorldComponent.isRole(player,Noellesroles.EXECUTIONER) || gameWorldComponent.isRole(player,Noellesroles.JESTER)) {
             List<ShopEntry> entries = Noellesroles.FRAMING_ROLES_SHOP;

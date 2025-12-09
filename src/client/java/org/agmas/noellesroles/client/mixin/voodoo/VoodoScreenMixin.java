@@ -38,7 +38,7 @@ public abstract class VoodoScreenMixin extends LimitedHandledScreen<PlayerScreen
         super(handler, inventory, title);
     }
     @Inject(method = "render", at = @At("HEAD"))
-    void a(DrawContext context, int mouseX, int mouseY, float delta, CallbackInfo ci) {
+    void renderVoodooText(DrawContext context, int mouseX, int mouseY, float delta, CallbackInfo ci) {
         GameWorldComponent gameWorldComponent = (GameWorldComponent) GameWorldComponent.KEY.get(player.getWorld());
         ConfigWorldComponent configWorldComponent = (ConfigWorldComponent) ConfigWorldComponent.KEY.get(player.getWorld());
         if (gameWorldComponent.isRole(player,Noellesroles.VOODOO)) {
@@ -52,7 +52,7 @@ public abstract class VoodoScreenMixin extends LimitedHandledScreen<PlayerScreen
     }
 
     @Inject(method = "init", at = @At("HEAD"))
-    void b(CallbackInfo ci) {
+    void renderVoodooHeads(CallbackInfo ci) {
         GameWorldComponent gameWorldComponent = (GameWorldComponent) GameWorldComponent.KEY.get(player.getWorld());
         if (gameWorldComponent.isRole(player,Noellesroles.VOODOO)) {
             List<UUID> entries = new ArrayList<>(MinecraftClient.getInstance().player.networkHandler.getPlayerUuids());

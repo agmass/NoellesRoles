@@ -37,7 +37,7 @@ public abstract class BartenderShopMixin extends LimitedHandledScreen<PlayerScre
     }
 
     @Inject(method = "init", at = @At("HEAD"))
-    void b(CallbackInfo ci) {
+    void bartenderShopRenderer(CallbackInfo ci) {
         GameWorldComponent gameWorldComponent = (GameWorldComponent) GameWorldComponent.KEY.get(player.getWorld());
         if (gameWorldComponent.isRole(player,Noellesroles.BARTENDER)) {
             List<ShopEntry> entries = new ArrayList<>();
