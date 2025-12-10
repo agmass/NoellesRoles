@@ -32,11 +32,11 @@ public abstract class NoisemakerShopMixin extends LimitedHandledScreen<PlayerScr
     }
 
     @Inject(method = "init", at = @At("HEAD"))
-    void b(CallbackInfo ci) {
+    void noisemakerShopAddChildren(CallbackInfo ci) {
         GameWorldComponent gameWorldComponent = (GameWorldComponent) GameWorldComponent.KEY.get(player.getWorld());
         if (gameWorldComponent.isRole(player,Noellesroles.NOISEMAKER)) {
             List<ShopEntry> entries = new ArrayList<>();
-            entries.add(new ShopEntry(TMMItems.FIRECRACKER.getDefaultStack(), 10, ShopEntry.Type.TOOL));
+            entries.add(new ShopEntry(TMMItems.FIRECRACKER.getDefaultStack(), 75, ShopEntry.Type.TOOL));
             int apart = 36;
             int x = width / 2 - (entries.size()) * apart / 2 + 9;
             int shouldBeY = (((LimitedInventoryScreen)(Object)this).height - 32) / 2;

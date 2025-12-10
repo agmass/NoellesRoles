@@ -29,7 +29,7 @@ public abstract class MorphlingRendererMixin {
     @Shadow public abstract Identifier getTexture(AbstractClientPlayerEntity abstractClientPlayerEntity);
 
     @Inject(method = "getTexture(Lnet/minecraft/client/network/AbstractClientPlayerEntity;)Lnet/minecraft/util/Identifier;", at = @At("HEAD"), cancellable = true)
-    void b(AbstractClientPlayerEntity abstractClientPlayerEntity, CallbackInfoReturnable<Identifier> cir) {
+    void renderMorphlingSkin(AbstractClientPlayerEntity abstractClientPlayerEntity, CallbackInfoReturnable<Identifier> cir) {
         if (TMMClient.moodComponent != null) {
             if ((ConfigWorldComponent.KEY.get(abstractClientPlayerEntity.getWorld())).insaneSeesMorphs && TMMClient.moodComponent.isLowerThanDepressed() && NoellesrolesClient.SHUFFLED_PLAYER_ENTRIES_CACHE.containsKey(abstractClientPlayerEntity.getUuid())) {
                 cir.setReturnValue(TMMClient.PLAYER_ENTRIES_CACHE.get(NoellesrolesClient.SHUFFLED_PLAYER_ENTRIES_CACHE.get(abstractClientPlayerEntity.getUuid())).getSkinTextures().texture());
@@ -50,7 +50,7 @@ public abstract class MorphlingRendererMixin {
         }
     }
     @WrapOperation(method = "renderArm", at = @At(value = "INVOKE", target = "Lnet/minecraft/client/network/AbstractClientPlayerEntity;getSkinTextures()Lnet/minecraft/client/util/SkinTextures;"))
-    SkinTextures b(AbstractClientPlayerEntity instance, Operation<SkinTextures> original) {
+    SkinTextures renderArm(AbstractClientPlayerEntity instance, Operation<SkinTextures> original) {
         if ((MorphlingPlayerComponent.KEY.get(instance)).getMorphTicks() > 0) {
             if (instance.getEntityWorld().getPlayerByUuid((MorphlingPlayerComponent.KEY.get(instance)).disguise) != null) {
                  return ((AbstractClientPlayerEntity) instance.getEntityWorld().getPlayerByUuid((MorphlingPlayerComponent.KEY.get(instance)).disguise)).getSkinTextures();

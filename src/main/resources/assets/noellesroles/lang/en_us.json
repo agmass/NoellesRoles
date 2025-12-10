@@ -49,6 +49,9 @@
   "announcement.goals.recaller": "Teleport to anywhere on the train!",
   "announcement.role.recaller": "Recaller",
 
+  "announcement.goals.better_vigilante": "Uhhhhhhhhhhhhh",
+  "announcement.role.better_vigilante": "Better Vigilante",
+
   "announcement.goals.vulture": "Eat bodies to turn into a killer.",
   "announcement.role.vulture": "Vulture",
   "hud.vulture.eat": "Press %s to eat!",

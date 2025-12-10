@@ -23,7 +23,7 @@ public abstract class GiveCoinsOnMoodCompletionMixin {
     @Shadow @Final private PlayerEntity player;
 
     @Inject(method = "setMood", at = @At("HEAD"))
-    void b(float mood, CallbackInfo ci) {
+    void giveCoinsForMood(float mood, CallbackInfo ci) {
         GameWorldComponent gameWorldComponent = (GameWorldComponent)GameWorldComponent.KEY.get(player.getWorld());
         if (mood > getMood()) {
             if (gameWorldComponent.getRole(player) != null) {

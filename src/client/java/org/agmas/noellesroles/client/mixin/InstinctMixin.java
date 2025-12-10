@@ -47,7 +47,7 @@ public abstract class InstinctMixin {
     }
 
     @Inject(method = "getInstinctHighlight", at = @At("HEAD"), cancellable = true)
-    private static void b(Entity target, CallbackInfoReturnable<Integer> cir) {
+    private static void getInstinctHighlightColor(Entity target, CallbackInfoReturnable<Integer> cir) {
         GameWorldComponent gameWorldComponent = (GameWorldComponent) GameWorldComponent.KEY.get(MinecraftClient.getInstance().player.getWorld());
         if (target instanceof PlayerEntity) {
             if (!((PlayerEntity)target).isSpectator()) {

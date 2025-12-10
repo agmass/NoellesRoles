@@ -36,7 +36,7 @@ public abstract class BartenderPlayerShopComponentMixin {
     @Shadow public abstract void sync();
 
     @Inject(method = "tryBuy", at = @At("HEAD"), cancellable = true)
-    void b(int index, CallbackInfo ci) {
+    void bartenderBuy(int index, CallbackInfo ci) {
         GameWorldComponent gameWorldComponent = GameWorldComponent.KEY.get(player.getWorld());
         if (gameWorldComponent.isRole(player,Noellesroles.BARTENDER)) {
             if (index == 0) {

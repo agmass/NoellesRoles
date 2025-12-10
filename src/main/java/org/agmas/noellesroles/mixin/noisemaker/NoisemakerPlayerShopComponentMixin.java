@@ -29,12 +29,12 @@ public abstract class NoisemakerPlayerShopComponentMixin {
     @Shadow public abstract void sync();
 
     @Inject(method = "tryBuy", at = @At("HEAD"), cancellable = true)
-    void b(int index, CallbackInfo ci) {
+    void noisemakerTryBuy(int index, CallbackInfo ci) {
         GameWorldComponent gameWorldComponent = GameWorldComponent.KEY.get(player.getWorld());
         if (gameWorldComponent.isRole(player,Noellesroles.NOISEMAKER)) {
             if (index == 0) {
-                if (balance >= 10) {
-                    this.balance -= 10;
+                if (balance >= 75) {
+                    this.balance -= 75;
                     sync();
                     player.giveItemStack(TMMItems.FIRECRACKER.getDefaultStack());
                     PlayerEntity var6 = this.player;

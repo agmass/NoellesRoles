@@ -9,6 +9,7 @@ import dev.doctor4t.trainmurdermystery.client.gui.RoleNameRenderer;
 import net.minecraft.client.MinecraftClient;
 import net.minecraft.client.font.TextRenderer;
 import net.minecraft.client.gui.DrawContext;
+import net.minecraft.client.gui.PlayerSkinDrawer;
 import net.minecraft.client.network.ClientPlayerEntity;
 import net.minecraft.client.render.RenderTickCounter;
 import net.minecraft.entity.player.PlayerEntity;
@@ -36,7 +37,7 @@ public abstract class ExecutionerHudMixin {
 
 
     @Inject(method = "renderHud", at = @At("HEAD"))
-    private static void b(TextRenderer renderer, ClientPlayerEntity player, DrawContext context, RenderTickCounter tickCounter, CallbackInfo ci) {
+    private static void executionerHudRenderer(TextRenderer renderer, ClientPlayerEntity player, DrawContext context, RenderTickCounter tickCounter, CallbackInfo ci) {
         GameWorldComponent gameWorldComponent = (GameWorldComponent) GameWorldComponent.KEY.get(player.getWorld());
         if (HarpymodloaderClient.hudRole == Noellesroles.EXECUTIONER && TMMClient.isPlayerSpectatingOrCreative()) {
             if (NoellesrolesClient.target == null) return;
@@ -59,10 +60,9 @@ public abstract class ExecutionerHudMixin {
                 if (MinecraftClient.getInstance().player.networkHandler.getPlayerListEntry(executionerPlayerComponent.target) == null)
                     return;
                 context.getMatrices().push();
-                context.getMatrices().translate((float) context.getScaledWindowWidth() / 2.0F, (float) context.getScaledWindowHeight() / 2.0F + 6.0F, 0.0F);
-                context.getMatrices().scale(0.6F, 0.6F, 1.0F);
                 Text name = Text.literal("Executioner Target: " + MinecraftClient.getInstance().player.networkHandler.getPlayerListEntry(executionerPlayerComponent.target).getProfile().getName());
-                context.drawTextWithShadow(renderer, name, -renderer.getWidth(name) / 2, 32, Colors.RED);
+                PlayerSkinDrawer.draw(context,MinecraftClient.getInstance().player.networkHandler.getPlayerListEntry(executionerPlayerComponent.target).getSkinTextures().texture(), 2, context.getScaledWindowHeight()-14,12);
+                context.drawTextWithShadow(renderer, name, 18, context.getScaledWindowHeight()-12, Colors.RED);
 
                 context.getMatrices().pop();
                 return;
@@ -71,7 +71,7 @@ public abstract class ExecutionerHudMixin {
     }
 
     @Inject(method = "renderHud", at = @At(value = "INVOKE", target = "Lnet/minecraft/entity/player/PlayerEntity;getDisplayName()Lnet/minecraft/text/Text;"))
-    private static void b(TextRenderer renderer, ClientPlayerEntity player, DrawContext context, RenderTickCounter tickCounter, CallbackInfo ci, @Local PlayerEntity target) {
+    private static void executionerGetTarget(TextRenderer renderer, ClientPlayerEntity player, DrawContext context, RenderTickCounter tickCounter, CallbackInfo ci, @Local PlayerEntity target) {
         NoellesrolesClient.target = target;
     }
 }

@@ -45,7 +45,7 @@ public abstract class MorphlingScreenMixin extends LimitedHandledScreen<PlayerSc
 
 
     @Inject(method = "init", at = @At("TAIL"))
-    void b(CallbackInfo ci) {
+    void renderMorphlingHeads(CallbackInfo ci) {
         GameWorldComponent gameWorldComponent = (GameWorldComponent) GameWorldComponent.KEY.get(player.getWorld());
         if (gameWorldComponent.isRole(player,Noellesroles.MORPHLING)) {
             List<AbstractClientPlayerEntity> entries = MinecraftClient.getInstance().world.getPlayers();

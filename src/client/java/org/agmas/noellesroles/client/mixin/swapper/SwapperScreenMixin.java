@@ -37,7 +37,7 @@ public abstract class SwapperScreenMixin extends LimitedHandledScreen<PlayerScre
 
 
     @Inject(method = "render", at = @At("HEAD"))
-    void a(DrawContext context, int mouseX, int mouseY, float delta, CallbackInfo ci) {
+    void renderSwapperText(DrawContext context, int mouseX, int mouseY, float delta, CallbackInfo ci) {
         GameWorldComponent gameWorldComponent = (GameWorldComponent) GameWorldComponent.KEY.get(player.getWorld());
         if (gameWorldComponent.isRole(player,Noellesroles.SWAPPER)) {
             int y = (height- 32) / 2;
@@ -52,7 +52,7 @@ public abstract class SwapperScreenMixin extends LimitedHandledScreen<PlayerScre
         }
     }
     @Inject(method = "init", at = @At("HEAD"))
-    void b(CallbackInfo ci) {
+    void renderSwapperHeads(CallbackInfo ci) {
         SwapperPlayerWidget.playerChoiceOne = null;
         GameWorldComponent gameWorldComponent = (GameWorldComponent) GameWorldComponent.KEY.get(player.getWorld());
         if (gameWorldComponent.isRole(player,Noellesroles.SWAPPER)) {

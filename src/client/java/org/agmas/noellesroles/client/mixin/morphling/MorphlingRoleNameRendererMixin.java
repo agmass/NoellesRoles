@@ -22,7 +22,7 @@ import org.spongepowered.asm.mixin.injection.Redirect;
 public abstract class MorphlingRoleNameRendererMixin {
 
     @WrapOperation(method = "renderHud", at = @At(value = "INVOKE", target = "Lnet/minecraft/entity/player/PlayerEntity;getDisplayName()Lnet/minecraft/text/Text;"))
-    private static Text b(PlayerEntity instance, Operation<Text> original) {
+    private static Text renderRoleHud(PlayerEntity instance, Operation<Text> original) {
 
         if (TMMClient.moodComponent != null) {
             if ((ConfigWorldComponent.KEY.get(instance.getWorld())).insaneSeesMorphs && TMMClient.moodComponent.isLowerThanDepressed() && NoellesrolesClient.SHUFFLED_PLAYER_ENTRIES_CACHE.get(instance.getUuid()) != null) {

@@ -21,6 +21,7 @@
     "host.MasterKeySmallDoorMixin",
     "host.MasterKeyTrainDoorMixin",
     "host.MoneyIncreaseMixin",
+    "jester.FakeRevolverMixin",
     "jester.JesterItemEntityMixin",
     "jester.JesterJestMixin",
     "morphling.MorphlingReseterMixin",
