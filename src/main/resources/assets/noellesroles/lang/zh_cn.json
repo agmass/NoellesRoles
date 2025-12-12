@@ -1,8 +1,8 @@
 {
-  "announcement.goals.jester": "找到杀手并与其合作取得胜利",
+  "announcement.goals.jester": "找到杀手并与其合作取得胜利。",
   "announcement.role.jester": "狂信者",
 
-  "announcement.goals.morphling": "变成其他人的样子愚弄所有人",
+  "announcement.goals.morphling": "变成其他人的样子愚弄所有人。",
   "announcement.role.morphling": "变形怪",
 
   "announcement.goals.awesome_binglus": "你有超多便条，随便写吧",
@@ -11,41 +11,41 @@
   "announcement.goals.conductor": "你能打开列车上所有的门",
   "announcement.role.conductor": "列车长",
 
-  "announcement.goals.the_insane_damned_paranoid_killer": "我听得到死者的声音",
+  "announcement.goals.the_insane_damned_paranoid_killer": "我听得到死者的声音！",
   "announcement.role.the_insane_damned_paranoid_killer": "亡语杀手",
-  "announcement.win.the_insane_damned_paranoid_killer": "杀手胜利",
+  "announcement.win.the_insane_damned_paranoid_killer": "杀手胜利！",
 
 
-  "announcement.goals.bartender": "透过墙壁看见喝酒和中毒的玩家",
+  "announcement.goals.bartender": "透过墙壁看见喝酒和中毒的玩家！",
   "announcement.role.bartender": "调酒师",
 
-  "announcement.goals.phantom": "可以隐形，但要小心你还有碰撞体积",
+  "announcement.goals.phantom": "可以隐形，但要小心你还有碰撞体积。",
   "announcement.role.phantom": "幻灵",
 
-  "announcement.goals.noisemaker": "在死亡时向所有人高亮你的位置",
+  "announcement.goals.noisemaker": "在死亡时向所有人高亮你的位置。",
   "announcement.role.noisemaker": "大嗓门",
 
-  "announcement.goals.voodoo": "选择一名玩家，在你死时一起同归于尽",
+  "announcement.goals.voodoo": "选择一名玩家，在你死时一起同归于尽。",
   "announcement.role.voodoo": "巫毒师",
   "hud.voodoo.deaths_must_be_triggered_by_another_player": "巫毒师的死亡必须由另一名玩家触发！",
 
-  "announcement.goals.swapper": "指定两名玩家交换位置",
+  "announcement.goals.swapper": "指定两名玩家交换位置。",
   "announcement.role.swapper": "交换者",
   "hud.swapper.first_player_selection": "选择第一个交换的玩家",
   "hud.swapper.second_player_selection": "选择第二个交换的玩家",
 
-  "announcement.goals.coroner": "从尸体上获取信息",
+  "announcement.goals.coroner": "从尸体上获取信息。",
   "announcement.role.coroner": "验尸官",
-  "announcement.win.coroner": "乘客胜利",
+  "announcement.win.coroner": "乘客胜利！",
   "hud.coroner.sanity_requirements": "验尸需保持一半的理智值",
   "hud.coroner.death_info": "死于 %s 秒前，死因是",
-  "hud.coroner.role_info": "其身份为 ",
+  "hud.coroner.role_info": "其身份为",
 
   "announcement.goals.executioner": "当你的目标死于非杀手之手后，你将随机获得其他杀手身份。",
   "announcement.role.executioner": "仇杀客",
   "hud.executioner.target": "仇杀目标 %s",
 
-  "announcement.goals.trapper": "检查其他玩家的身份",
+  "announcement.goals.trapper": "检查其他玩家的身份。",
   "announcement.role.trapper": "检查官",
 
   "announcement.goals.recaller": "传送到列车上的指定位置！",
@@ -57,7 +57,7 @@
   "announcement.goals.vulture": "吃掉足够的尸体后变成杀手！",
   "announcement.role.vulture": "秃鹫",
   "hud.vulture.eat": "按下 %s 键来啃食尸体！",
-  "hud.vulture.already_consumed": "这具尸体已经被吃过了",
+  "hud.vulture.already_consumed": "这具尸体已经被吃过了。",
 
 
   "item.noellesroles.fake_revolver": "假左轮手枪",
@@ -87,3 +87,4 @@
   "tip.master_key_invisible": "万能钥匙会显示为撬锁器。"
 
 }
+
