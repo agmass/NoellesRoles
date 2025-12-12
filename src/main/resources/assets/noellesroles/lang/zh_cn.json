@@ -17,7 +17,7 @@
 
 
   "announcement.goals.bartender": "透过墙壁看见喝酒和中毒的玩家！",
-  "announcement.role.bartender": "调酒师",
+  "announcement.role.bartender": "酒保",
 
   "announcement.goals.phantom": "可以隐形，但要小心你还有碰撞体积。",
   "announcement.role.phantom": "幻灵",
@@ -87,4 +87,5 @@
   "tip.master_key_invisible": "万能钥匙会显示为撬锁器。"
 
 }
+
 
