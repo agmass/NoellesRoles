@@ -16,7 +16,7 @@
   "announcement.win.the_insane_damned_paranoid_killer": "杀手胜利",
 
 
-  "announcement.goals.bartender": "透过墙壁看见喝酒和中毒的玩家",
+  "announcement.goals.bartender": "透过墙壁看见喝酒和中毒的乘客",
   "announcement.role.bartender": "调酒师",
 
   "announcement.goals.phantom": "化为幻影，但要小心你还有碰撞体积",
@@ -25,14 +25,14 @@
   "announcement.goals.noisemaker": "在死亡时向所有人高亮你的位置",
   "announcement.role.noisemaker": "显眼包",
 
-  "announcement.goals.voodoo": "选择一名玩家，在你死时一起同归于尽",
+  "announcement.goals.voodoo": "选择一名乘客，在你死时一起同归于尽",
   "announcement.role.voodoo": "巫毒",
-  "hud.voodoo.deaths_must_be_triggered_by_another_player": "巫毒的能力必须由其他玩家触发",
+  "hud.voodoo.deaths_must_be_triggered_by_another_player": "巫毒的能力必须由其他乘客触发",
 
-  "announcement.goals.swapper": "指定两名玩家交换位置",
+  "announcement.goals.swapper": "指定两名乘客交换位置",
   "announcement.role.swapper": "交换者",
-  "hud.swapper.first_player_selection": "选择第一个交换的玩家",
-  "hud.swapper.second_player_selection": "选择第二个交换的玩家",
+  "hud.swapper.first_player_selection": "选择第一个交换的乘客",
+  "hud.swapper.second_player_selection": "选择第二个交换的乘客",
 
   "announcement.goals.coroner": "从尸体上获取信息",
   "announcement.role.coroner": "验尸官",
@@ -41,11 +41,11 @@
   "hud.coroner.death_info": "死于 %s 秒前，死因是",
   "hud.coroner.role_info": "身份是 ",
 
-  "announcement.goals.executioner": "当你的目标死于非杀手之手后，你将随机获得其他杀手身份。",
+  "announcement.goals.executioner": "当你的目标死于非杀手之手后，你将随机获得其他杀手身份",
   "announcement.role.executioner": "刽子手",
   "hud.executioner.target": "目标乘客 %s",
 
-  "announcement.goals.trapper": "检查其他玩家的身份",
+  "announcement.goals.trapper": "检查其他乘客的身份",
   "announcement.role.trapper": "检查官",
 
   "announcement.goals.recaller": "传送到列车上的指定位置！",
@@ -64,9 +64,9 @@
   "item.noellesroles.master_key": "万能钥匙",
   "item.noellesroles.fake_knife": "假匕首",
   "item.noellesroles.defense_vial": "去毒试剂",
-  "item.noellesroles.defense_vial.tooltip": "在食物或饮料托盘上右键使用\n清除托盘上所有已施加的毒药\n食用者可额外承受一次伤害",
+  "item.noellesroles.defense_vial.tooltip": "右键食物或饮品托盘使用\n清除托盘上已施加的毒药\n食用的乘客可额外承受一次伤害",
   "item.noellesroles.delusion_vial": "幻觉试剂",
-  "item.noellesroles.delusion_vial.tooltip": "在食物或饮料托盘上右键使用\n食用者获得假中毒效果\n实际不会造成任何效果",
+  "item.noellesroles.delusion_vial.tooltip": "右键食物或饮品托盘使用\n食用的乘客会误以为自己中毒\n实际不会造成任何效果",
 
   "death_reason.trainmurdermystery.gun_shot": "被子弹击中。",
   "death_reason.trainmurdermystery.knife_stab": "被刀刺死",
@@ -83,4 +83,6 @@
   "tip.vulture": "%s/%s 尸体数",
   "tip.recaller.not_enough_money": "需要 100\uE781 来进行传送",
   "tip.noellesroles.cooldown": "能力在 %s 秒后可用"
+  "tip.master_key_invisible_count": "乘客人数少于 %s 人时，万能钥匙显示为撬锁器",
+  "tip.master_key_invisible": "万能钥匙显示为撬锁器"
 }
