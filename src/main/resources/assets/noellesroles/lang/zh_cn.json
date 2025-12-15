@@ -11,7 +11,7 @@
   "announcement.goals.conductor": "你能打开列车上所有的门",
   "announcement.role.conductor": "列车长",
 
-  "announcement.goals.the_insane_damned_paranoid_killer": "我听得到死者的声音",
+  "announcement.goals.the_insane_damned_paranoid_killer": "我听得见死者的声音",
   "announcement.role.the_insane_damned_paranoid_killer": "冤魂",
   "announcement.win.the_insane_damned_paranoid_killer": "杀手胜利",
 
@@ -39,9 +39,9 @@
   "announcement.win.coroner": "乘客胜利",
   "hud.coroner.sanity_requirements": "验尸需保持一半的理智值",
   "hud.coroner.death_info": "死于 %s 秒前，死因是",
-  "hud.coroner.role_info": "身份是 ",
+  "hud.coroner.role_info": "其身份为 ",
 
-  "announcement.goals.executioner": "当你的目标死于非杀手之手后，你将随机获得其他杀手身份",
+  "announcement.goals.executioner": "当目标死于非杀手之手后，你将随机获得杀手身份",
   "announcement.role.executioner": "刽子手",
   "hud.executioner.target": "目标乘客 %s",
 
@@ -54,10 +54,10 @@
   "announcement.goals.better_vigilante": "Emmmmmmmmmmm",
   "announcement.role.better_vigilante": "更优秀的义警",
 
-  "announcement.goals.vulture": "吃掉两具尸体后变成杀手",
+  "announcement.goals.vulture": "吃掉足够的尸体后变成杀手",
   "announcement.role.vulture": "秃鹫",
   "hud.vulture.eat": "按下 %s 键来吃掉尸体",
-  "hud.vulture.already_consumed": "这具尸体已经被吃掉了",
+  "hud.vulture.already_consumed": "这具尸体已经被啃食干净了",
 
 
   "item.noellesroles.fake_revolver": "假左轮手枪",
@@ -68,7 +68,7 @@
   "item.noellesroles.delusion_vial": "幻觉试剂",
   "item.noellesroles.delusion_vial.tooltip": "右键食物或饮品托盘使用\n食用的乘客会误以为自己中毒\n实际不会造成任何效果",
 
-  "death_reason.trainmurdermystery.gun_shot": "被子弹击中。",
+  "death_reason.trainmurdermystery.gun_shot": "被子弹击中",
   "death_reason.trainmurdermystery.knife_stab": "被刀刺死",
   "death_reason.trainmurdermystery.generic": "未知",
   "death_reason.trainmurdermystery.bat_hit": "遭受钝器重击",
@@ -85,4 +85,5 @@
   "tip.noellesroles.cooldown": "能力在 %s 秒后可用"
   "tip.master_key_invisible_count": "乘客人数少于 %s 人时，万能钥匙显示为撬锁器",
   "tip.master_key_invisible": "万能钥匙显示为撬锁器"
+
 }
