@@ -14,7 +14,7 @@ public abstract class FramingPassiveIncomeMixin {
 
     @WrapOperation(method = "tickServerGameLoop", at = @At(value = "INVOKE", target = "Ldev/doctor4t/trainmurdermystery/cca/GameWorldComponent;canUseKillerFeatures(Lnet/minecraft/entity/player/PlayerEntity;)Z"))
     public boolean passiveMoneyGeneration(GameWorldComponent instance, PlayerEntity player, Operation<Boolean> original) {
-        if (instance.isRole(player, Noellesroles.NOISEMAKER) || instance.isRole(player, Noellesroles.JESTER) || instance.isRole(player, Noellesroles.EXECUTIONER)) return true;
+        if (instance.isRole(player, Noellesroles.NOISEMAKER) || instance.isRole(player, Noellesroles.MIMIC) || instance.isRole(player, Noellesroles.JESTER) || instance.isRole(player, Noellesroles.EXECUTIONER)) return true;
         return original.call(instance,player);
     }
 

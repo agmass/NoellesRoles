@@ -32,7 +32,7 @@ public abstract class FramingRolesShopComponentMixin {
     @Inject(method = "tryBuy", at = @At("HEAD"), cancellable = true)
     void framingRolesBuy(int index, CallbackInfo ci) {
         GameWorldComponent gameWorldComponent = GameWorldComponent.KEY.get(player.getWorld());
-        if (gameWorldComponent.isRole(player,Noellesroles.EXECUTIONER) || gameWorldComponent.isRole(player,Noellesroles.JESTER)) {
+        if (gameWorldComponent.isRole(player,Noellesroles.MIMIC) || gameWorldComponent.isRole(player,Noellesroles.EXECUTIONER) || gameWorldComponent.isRole(player,Noellesroles.JESTER)) {
 
             ShopEntry entry = Noellesroles.FRAMING_ROLES_SHOP.get(index);
 
