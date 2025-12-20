@@ -1,8 +1,8 @@
 {
-  "announcement.goals.jester": "找到杀手并与其合作取得胜利",
-  "announcement.role.jester": "弄臣",
+  "announcement.goals.jester": "找到杀手并与其合作取得胜利。",
+  "announcement.role.jester": "狂信者",
 
-  "announcement.goals.morphling": "变成其他人的样子愚弄所有人",
+  "announcement.goals.morphling": "变成其他人的样子愚弄所有人。",
   "announcement.role.morphling": "变形怪",
 
   "announcement.goals.awesome_binglus": "你有超多便条，随便写吧",
@@ -11,88 +11,91 @@
   "announcement.goals.conductor": "你能打开列车上所有的门",
   "announcement.role.conductor": "列车长",
 
-  "announcement.goals.the_insane_damned_paranoid_killer": "我听得见死者的声音",
-  "announcement.role.the_insane_damned_paranoid_killer": "冤魂",
-  "announcement.win.the_insane_damned_paranoid_killer": "杀手胜利",
+  "announcement.goals.the_insane_damned_paranoid_killer": "我听得到死者的声音！",
+  "announcement.role.the_insane_damned_paranoid_killer": "亡语杀手",
+  "announcement.win.the_insane_damned_paranoid_killer": "杀手胜利！",
 
 
-  "announcement.goals.bartender": "你能透过墙壁看见喝酒和中毒的乘客",
+  "announcement.goals.bartender": "透过墙壁看见喝酒和中毒的玩家！",
   "announcement.role.bartender": "酒保",
 
-  "announcement.goals.phantom": "化为幻影，但要小心你还有碰撞体积",
+  "announcement.goals.phantom": "可以隐形，但要小心你还有碰撞体积。",
   "announcement.role.phantom": "幻灵",
 
-  "announcement.goals.noisemaker": "在死亡时向所有人高亮你的位置",
-  "announcement.role.noisemaker": "显眼包",
+  "announcement.goals.noisemaker": "在死亡时向所有人高亮你的位置。",
+  "announcement.role.noisemaker": "大嗓门",
 
-  "announcement.goals.voodoo": "选择一名乘客，在你死时一起同归于尽",
-  "announcement.role.voodoo": "巫毒",
-  "hud.voodoo.deaths_must_be_triggered_by_another_player": "巫毒的能力必须由其他乘客触发",
+  "announcement.goals.voodoo": "选择一名玩家，在你死时一起同归于尽。",
+  "announcement.role.voodoo": "巫毒师",
+  "hud.voodoo.player_deaths_only": "巫毒师的死亡必须由另一名玩家触发！",
 
-  "announcement.goals.swapper": "指定两名乘客交换位置",
+  "announcement.goals.swapper": "指定两名玩家交换位置。",
   "announcement.role.swapper": "交换者",
-  "hud.swapper.first_player_selection": "选择第一个交换的乘客",
-  "hud.swapper.second_player_selection": "选择第二个交换的乘客",
+  "hud.swapper.first_player_selection": "选择第一个交换的玩家",
+  "hud.swapper.second_player_selection": "选择第二个交换的玩家",
 
-  "announcement.goals.coroner": "从尸体上获取信息",
+  "announcement.goals.coroner": "从尸体上获取信息。",
   "announcement.role.coroner": "验尸官",
-  "announcement.win.coroner": "乘客胜利",
+  "announcement.win.coroner": "乘客胜利！",
   "hud.coroner.sanity_requirements": "验尸需保持一半的理智值",
   "hud.coroner.death_info": "死于 %s 秒前，死因是",
-  "hud.coroner.role_info": "其身份为 ",
+  "hud.coroner.role_info": "其身份为",
 
-  "announcement.goals.executioner": "当目标死于非杀手之手后，你将随机获得杀手身份",
-  "announcement.role.executioner": "刽子手",
-  "hud.executioner.target": "目标乘客 %s",
+  "announcement.goals.executioner": "当你的目标死于非杀手之手后，你将随机获得其他杀手身份。",
+  "announcement.role.executioner": "仇杀客",
+  "hud.executioner.target": "仇杀目标 %s",
 
-  "announcement.goals.trapper": "检查其他乘客的身份",
+  "announcement.goals.trapper": "检查其他玩家的身份。",
   "announcement.role.trapper": "检查官",
 
-  "announcement.goals.recaller": "传送到列车上的指定位置",
+  "announcement.goals.recaller": "传送到列车上的指定位置！",
   "announcement.role.recaller": "回溯者",
-  
-  "announcement.goals.guesser": "猜对目标乘客的身份将使其直接倒地身亡",
-  "announcement.role.guesser": "猜测者",
-  
-  "announcement.goals.mimic": "杀手会误以为你是同伙，这正是你的完美计划",
-  "announcement.role.mimic": "间谍",
 
-  "announcement.goals.better_vigilante": "Emmmmmmmmmmm",
-  "announcement.role.better_vigilante": "更优秀的义警",
+  "announcement.goals.guesser": "猜测平民的角色以将其瞬间击杀。",
+  "announcement.role.guesser": "刺客",
 
-  "announcement.goals.vulture": "吃掉足够的尸体后变成杀手",
+  "announcement.goals.mimic": "在其他杀手眼中，你看起来像杀手同伙。但你是平民。",
+  "announcement.role.mimic": "模仿者",
+
+  "announcement.modifier.tiny": "微小",
+
+  "announcement.goals.better_vigilante": "呃——————",
+  "announcement.role.better_vigilante": "更好的义警",
+
+  "announcement.goals.vulture": "吃掉足够的尸体后变成杀手！",
   "announcement.role.vulture": "秃鹫",
-  "hud.vulture.eat": "按下 %s 键来啃食尸体",
-  "hud.vulture.already_consumed": "这具尸体已经被啃食干净了",
+  "hud.vulture.eat": "按下 %s 键来啃食尸体！",
+  "hud.vulture.already_consumed": "这具尸体已经被吃过了。",
 
 
   "item.noellesroles.fake_revolver": "假左轮手枪",
   "item.noellesroles.master_key": "万能钥匙",
   "item.noellesroles.fake_knife": "假匕首",
   "item.noellesroles.defense_vial": "去毒试剂",
-  "item.noellesroles.defense_vial.tooltip": "右键食物或饮品托盘使用\n清除托盘上已施加的毒药\n食用的乘客可额外承受一次伤害",
+  "item.noellesroles.defense_vial.tooltip": "右键点击食物/饮品托盘以使用\n清除托盘上已施加的毒药\n让食用的玩家可以额外承受一次伤害。",
   "item.noellesroles.delusion_vial": "幻觉试剂",
-  "item.noellesroles.delusion_vial.tooltip": "右键食物或饮品托盘使用\n食用的乘客会误以为自己中毒\n实际不会造成任何效果",
+  "item.noellesroles.delusion_vial.tooltip": "右键点击食物/饮品托盘以使用\n使误食的玩家获得假中毒\n误以为自己中毒，但不会造成任何实际后果。",
 
-  "death_reason.wathe.gun_shot": "被子弹击中",
-  "death_reason.wathe.knife_stab": "被刀刺死",
-  "death_reason.wathe.generic": "未知",
-  "death_reason.wathe.bat_hit": "遭受钝器重击",
-  "death_reason.wathe.grenade": "爆炸",
-  "death_reason.wathe.poison": "中毒",
-  "death_reason.wathe.fell_out_of_train": "被列车碾死",
-  "death_reason.noellesroles.voodoo": "巫毒魔法",
+  "death_reason.wathe.gun_shot": "被子弹击中。",
+  "death_reason.wathe.knife_stab": "被刀刺死！",
+  "death_reason.wathe.generic": "未知。",
+  "death_reason.wathe.bat_hit": "遭受钝器重击！",
+  "death_reason.wathe.grenade": "爆炸！",
+  "death_reason.wathe.poison": "中毒！",
+  "death_reason.wathe.fell_out_of_train": "被列车碾死。",
+  "death_reason.noellesroles.voodoo": "巫毒魔法。",
 
-  "tip.phantom": "按下 %s 键来隐身",
-  "tip.recaller.place": "按下 %s 键来保存你的位置",
-  "tip.recaller.teleport": "按下 %s 键来传送至保存的位置",
-  "tip.vulture": "%s/%s 尸体数",
+  "tip.phantom": "按下 %s 键来隐形！",
+  "tip.recaller.place": "按下 %s 键来保存你的位置！",
+  "tip.recaller.teleport": "按下 %s 键来传送至保存的位置！",
+  "tip.vulture": "已吃掉尸体 %s/%s。",
   "tip.recaller.not_enough_money": "需要 100\uE781 来进行传送",
-  "tip.selected": "当前选中",
-  "tip.noellesroles.cooldown": "能力在 %s 秒后可用"
-  "tip.master_key_invisible_count": "乘客人数少于 %s 人时，万能钥匙显示为撬锁器",
-  "tip.master_key_invisible": "万能钥匙显示为撬锁器"
-
+  "tip.selected": "已选中",
+  "tip.noellesroles.cooldown": "能力在 %s 秒后可用",
+  "tip.master_key_invisible_count": "当人数少于 %s 时，万能钥匙会显示为撬锁器。",
+  "tip.master_key_invisible": "万能钥匙会显示为撬锁器。"
 }
+
+
 
 
