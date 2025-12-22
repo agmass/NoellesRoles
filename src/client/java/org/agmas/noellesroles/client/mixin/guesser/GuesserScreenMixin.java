@@ -49,7 +49,7 @@ public abstract class GuesserScreenMixin extends LimitedHandledScreen<PlayerScre
             if (!gameWorldComponent.isInnocent(player)) {
                 entries.clear();
                 for (AbstractClientPlayerEntity worldPlayer : MinecraftClient.getInstance().world.getPlayers()) {
-                    if (gameWorldComponent.isInnocent(worldPlayer))
+                    if (gameWorldComponent.isInnocent(worldPlayer) && !gameWorldComponent.isRole(player, Noellesroles.MIMIC))
                         entries.add(worldPlayer.getUuid());
                 }
             }
