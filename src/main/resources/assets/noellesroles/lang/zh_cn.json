@@ -93,11 +93,11 @@
   "tip.vulture": "%s/%s 尸体数",
   "tip.recaller.not_enough_money": "需要 100\uE781 来进行传送",
   "tip.selected": "当前选中",
-  "tip.noellesroles.cooldown": "能力在 %s 秒后可用"
+  "tip.noellesroles.cooldown": "能力在 %s 秒后可用",
   "tip.master_key_invisible_count": "乘客人数少于 %s 人时，万能钥匙显示为撬锁器",
   "tip.master_key_invisible": "万能钥匙显示为撬锁器"
-
 }
+
 
 
 
