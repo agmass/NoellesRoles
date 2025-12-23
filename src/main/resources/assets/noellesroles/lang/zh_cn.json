@@ -26,8 +26,8 @@
   "announcement.role.noisemaker": "显眼包",
 
   "announcement.goals.voodoo": "选择一名乘客，在你死亡时一起同归于尽!",
-  "announcement.role.voodoo": "巫毒",
-  "hud.voodoo.deaths_must_be_triggered_by_another_player": "巫毒的能力必须由其他乘客触发",
+  "announcement.role.voodoo": "巫毒师",
+  "hud.voodoo.deaths_must_be_triggered_by_another_player": "巫毒师的能力必须由其他乘客触发",
 
   "announcement.goals.swapper": "指定两名乘客交换位置!",
   "announcement.role.swapper": "交换者",
@@ -57,9 +57,9 @@
   "announcement.goals.mimic": "杀手会误以为你是同伙，这正是你的完美计划!",
   "announcement.role.mimic": "模仿者",
 
-  "announcement.modifier.tiny": "矮人",
+  "announcement.modifier.tiny": "矮小",
   "announcement.modifier.chameleon": "变色龙",
-  "announcement.modifier.guesser": "猜测者",
+  "announcement.modifier.guesser": "猜测",
 
   
   "announcement.goals.better_vigilante": "Emmmmmmmmmmm",
@@ -98,3 +98,4 @@
   "tip.master_key_invisible_count": "乘客人数少于 %s 人时，万能钥匙显示为撬锁器",
   "tip.master_key_invisible": "万能钥匙显示为撬锁器"
 }
+
