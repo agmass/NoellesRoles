@@ -1,73 +1,73 @@
 {
-  "announcement.goals.jester": "找到杀手并与其合作取得胜利。",
-  "announcement.role.jester": "狂信者",
+  "key.noellesroles.ability": "能力",
+  
+  "announcement.goals.noellesroles.jester": "找到杀手并与其合作取得胜利。",
+  "announcement.role.noellesroles.jester": "弄臣",
 
-  "announcement.goals.morphling": "变成其他人的样子愚弄所有人。",
-  "announcement.role.morphling": "变形怪",
+  "announcement.goals.noellesroles.morphling": "变成其他人的样子愚弄所有人。",
+  "announcement.role.noellesroles.morphling": "变形怪",
 
-  "announcement.goals.awesome_binglus": "你有超多便条，随便写吧",
-  "announcement.role.awesome_binglus": "记者",
+  "announcement.goals.noellesroles.awesome_binglus": "你有超多便条，随便写吧",
+  "announcement.role.noellesroles.awesome_binglus": "记者",
 
-  "announcement.goals.conductor": "你能打开列车上所有的门",
-  "announcement.role.conductor": "列车长",
+  "announcement.goals.noellesroles.conductor": "你能打开列车上所有的门",
+  "announcement.role.noellesroles.conductor": "列车长",
 
-  "announcement.goals.the_insane_damned_paranoid_killer": "我听得到死者的声音！",
-  "announcement.role.the_insane_damned_paranoid_killer": "亡语杀手",
-  "announcement.win.the_insane_damned_paranoid_killer": "杀手胜利！",
+  "announcement.goals.noellesroles.the_insane_damned_paranoid_killer": "我听得到死者的声音！",
+  "announcement.role.noellesroles.the_insane_damned_paranoid_killer": "亡语杀手",
 
+  "announcement.goals.noellesroles.bartender": "透过墙壁看见喝酒和中毒的玩家！",
+  "announcement.role.noellesroles.bartender": "酒保",
 
-  "announcement.goals.bartender": "透过墙壁看见喝酒和中毒的玩家！",
-  "announcement.role.bartender": "酒保",
+  "announcement.goals.noellesroles.phantom": "可以隐形，但要小心你还有碰撞体积。",
+  "announcement.role.noellesroles.phantom": "幻灵",
 
-  "announcement.goals.phantom": "可以隐形，但要小心你还有碰撞体积。",
-  "announcement.role.phantom": "幻灵",
+  "announcement.goals.noellesroles.noisemaker": "在死亡时向所有人高亮你的位置。",
+  "announcement.role.noellesroles.noisemaker": "大嗓门",
 
-  "announcement.goals.noisemaker": "在死亡时向所有人高亮你的位置。",
-  "announcement.role.noisemaker": "大嗓门",
-
-  "announcement.goals.voodoo": "选择一名玩家，在你死时一起同归于尽。",
-  "announcement.role.voodoo": "巫毒师",
+  "announcement.goals.noellesroles.voodoo": "选择一名玩家，在你死时一起同归于尽。",
+  "announcement.role.noellesroles.voodoo": "巫毒师",
   "hud.voodoo.player_deaths_only": "巫毒师的死亡必须由另一名玩家触发！",
 
-  "announcement.goals.swapper": "指定两名玩家交换位置。",
-  "announcement.role.swapper": "交换者",
+  "announcement.goals.noellesroles.swapper": "指定两名玩家交换位置。",
+  "announcement.role.noellesroles.swapper": "交换者",
   "hud.swapper.first_player_selection": "选择第一个交换的玩家",
   "hud.swapper.second_player_selection": "选择第二个交换的玩家",
 
-  "announcement.goals.coroner": "从尸体上获取信息。",
-  "announcement.role.coroner": "验尸官",
-  "announcement.win.coroner": "乘客胜利！",
+  "announcement.goals.noellesroles.coroner": "从尸体上获取信息。",
+  "announcement.role.noellesroles.coroner": "验尸官",
   "hud.coroner.sanity_requirements": "验尸需保持一半的理智值",
   "hud.coroner.death_info": "死于 %s 秒前，死因是",
   "hud.coroner.role_info": "其身份为",
 
-  "announcement.goals.executioner": "当你的目标死于非杀手之手后，你将随机获得其他杀手身份。",
-  "announcement.role.executioner": "仇杀客",
+  "announcement.goals.noellesroles.executioner": "当你的目标死于非杀手之手后，你将随机获得其他杀手身份。",
+  "announcement.role.noellesroles.executioner": "仇杀客",
   "hud.executioner.target": "仇杀目标 %s",
 
-  "announcement.goals.trapper": "检查其他玩家的身份。",
-  "announcement.role.trapper": "检查官",
+  "announcement.goals.noellesroles.trapper": "检查其他玩家的身份。",
+  "announcement.role.noellesroles.trapper": "检查官",
 
-  "announcement.goals.recaller": "传送到列车上的指定位置！",
-  "announcement.role.recaller": "回溯者",
+  "announcement.goals.noellesroles.recaller": "传送到列车上的指定位置！",
+  "announcement.role.noellesroles.recaller": "回溯者",
 
-  "announcement.goals.guesser": "猜测平民的角色以将其瞬间击杀。",
+  "announcement.goals.noellesroles.guesser": "猜测平民的角色以将其瞬间击杀。",
 
-  "announcement.goals.mimic": "在其他杀手眼中，你看起来像杀手同伙。但你是平民。",
-  "announcement.role.mimic": "模仿者",
+  "announcement.goals.noellesroles.mimic": "在其他杀手眼中，你看起来像杀手同伙。但你是平民。",
+  "announcement.role.noellesroles.mimic": "卧底",
 
-  "announcement.goals.better_vigilante": "呃——————",
-  "announcement.role.better_vigilante": "更好的义警",
+  "announcement.goals.noellesroles.better_vigilante": "呃——————",
+  "announcement.role.noellesroles.better_vigilante": "更好的义警",
 
-  "announcement.modifier.tiny": "小孩子",
-  "announcement.modifier.chameleon": "变色龙",
-  "announcement.modifier.guesser": "猜测者",
+  "announcement.modifier.noellesroles.tiny": "小孩子",
+  "announcement.modifier.noellesroles.chameleon": "变色龙",
+  "announcement.modifier.noellesroles.guesser": "猜测者",
+  "announcement.modifier.noellesroles.graverobber": "盗墓者",
+  "announcement.modifier.noellesroles.feather": "羽毛",
 
-  "announcement.goals.vulture": "吃掉足够的尸体后变成杀手！",
-  "announcement.role.vulture": "秃鹫",
+  "announcement.goals.noellesroles.vulture": "吃掉足够的尸体后变成杀手！",
+  "announcement.role.noellesroles.vulture": "秃鹫",
   "hud.vulture.eat": "按下 %s 键来啃食尸体！",
   "hud.vulture.already_consumed": "这具尸体已经被吃过了。",
-
 
   "item.noellesroles.fake_revolver": "假左轮手枪",
   "item.noellesroles.master_key": "万能钥匙",
@@ -76,6 +76,9 @@
   "item.noellesroles.defense_vial.tooltip": "右键点击食物/饮品托盘以使用\n清除托盘上已施加的毒药\n让食用的玩家可以额外承受一次伤害。",
   "item.noellesroles.delusion_vial": "幻觉试剂",
   "item.noellesroles.delusion_vial.tooltip": "右键点击食物/饮品托盘以使用\n使误食的玩家获得假中毒\n误以为自己中毒，但不会造成任何实际后果。",
+  "item.noellesroles.trapper_report": "检查官报告",
+  "item.noellesroles.role_mine": "检测仪",
+  "item.noellesroles.role_mine.tooltip": "右键可放置在地板或天花板上。\n放置后及手持时对其他玩家均不可见。",
 
   "death_reason.wathe.gun_shot": "被子弹击中。",
   "death_reason.wathe.knife_stab": "被刀刺死！",
@@ -85,6 +88,7 @@
   "death_reason.wathe.poison": "中毒！",
   "death_reason.wathe.fell_out_of_train": "被列车碾死。",
   "death_reason.noellesroles.voodoo": "巫毒魔法。",
+  "death_reason.noellesroles.modded_backfire": "愧疚而死",
 
   "tip.phantom": "按下 %s 键来隐形！",
   "tip.recaller.place": "按下 %s 键来保存你的位置！",
@@ -94,9 +98,8 @@
   "tip.selected": "已选中",
   "tip.noellesroles.cooldown": "能力在 %s 秒后可用",
   "tip.master_key_invisible_count": "当人数少于 %s 时，万能钥匙会显示为撬锁器。",
-  "tip.master_key_invisible": "万能钥匙会显示为撬锁器。"
+  "tip.master_key_invisible": "万能钥匙会显示为撬锁器。",
+  "tip.trapper.caught": "你的陷阱捕获了 %s 名玩家。 他们的身份是:",
+  
+  "subtitles.noellesroles.role_mine_beep": "检查仪发出哔哔声"
 }
-
-
-
-
