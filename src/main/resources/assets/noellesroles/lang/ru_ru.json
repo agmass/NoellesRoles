@@ -34,7 +34,7 @@
   "hud.swapper.second_player_selection": "Выберите второго игрока для обмена",
 
   "announcement.goals.coroner": "Получите информацию о мертвых телах.",
-  "announcement.role.coroner": "Детектив",
+  "announcement.role.coroner": "Патологоанатом",
   "announcement.win.coroner": "Пассажиры победили!",
   "hud.coroner.sanity_requirements": "Необходимо 50% рассудка, чтобы использовать эту способность",
   "hud.coroner.death_info": "Погиб %s с назад ",
