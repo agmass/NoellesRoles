@@ -13,7 +13,7 @@
   "announcement.goals.noellesroles.conductor": "你能打开列车上所有的门！",
   "announcement.role.noellesroles.conductor": "列车长",
 
-  "announcement.goals.noellesroles.the_insane_damned_paranoid_killer": "我听得到死者的声音！",
+  "announcement.goals.noellesroles.the_insane_damned_paranoid_killer": "我听得见死者的声音！",
   "announcement.role.noellesroles.the_insane_damned_paranoid_killer": "亡语杀手",
 
 
@@ -28,7 +28,7 @@
 
   "announcement.goals.noellesroles.voodoo": "选择一名玩家，在你死时一起同归于尽。",
   "announcement.role.noellesroles.voodoo": "巫毒师",
-  "hud.voodoo.player_deaths_only": "巫毒师的死亡必须由另一名玩家触发！",
+  "hud.voodoo.player_deaths_only": "巫毒师的死亡必须由另一名玩家触发",
 
   "announcement.goals.noellesroles.swapper": "指定两名玩家交换位置。",
   "announcement.role.noellesroles.swapper": "交换者",
@@ -39,22 +39,22 @@
   "announcement.role.noellesroles.coroner": "验尸官",
   "hud.coroner.sanity_requirements": "验尸需保持一半的理智值",
   "hud.coroner.death_info": "死于 %s 秒前，死因是",
-  "hud.coroner.role_info": "其身份为",
+  "hud.coroner.role_info": "其身份为 ",
 
   "announcement.goals.noellesroles.executioner": "当你的目标死于非杀手之手后，你将随机获得其他杀手身份。",
   "announcement.role.noellesroles.executioner": "仇杀客",
   "hud.executioner.target": "仇杀目标: %s",
 
-  "announcement.goals.noellesroles.trapper": "使用身份地雷获取其他玩家的身份。",
+  "announcement.goals.noellesroles.trapper": "使用身份地雷获取其他乘客的身份。",
   "announcement.role.noellesroles.trapper": "陷阱师",
 
-  "announcement.goals.noellesroles.recaller": "传送到列车上的指定位置！",
+  "announcement.goals.noellesroles.recaller": "传送至你在列车上保存的位置！",
   "announcement.role.noellesroles.recaller": "回溯者",
 
-  "announcement.goals.noellesroles.guesser": "猜测平民的角色以将其瞬间击杀。",
+  "announcement.goals.noellesroles.guesser": "猜中平民的身份以将其瞬间击杀。",
   "announcement.role.noellesroles.guesser": "猜测者",
 
-  "announcement.goals.noellesroles.mimic": "在其他杀手眼中，你看起来像杀手同伙。但你是平民。",
+  "announcement.goals.noellesroles.mimic": "杀手会误以为你是同伙，但你所属平民阵营。",
   "announcement.role.noellesroles.mimic": "模仿者",
 
   "announcement.modifier.noellesroles.tiny": "矮子",
@@ -70,42 +70,42 @@
   "announcement.goals.noellesroles.vulture": "吃掉足够的尸体后变成杀手！",
   "announcement.role.noellesroles.vulture": "秃鹫",
   "hud.vulture.eat": "按下 %s 键来啃食尸体！",
-  "hud.vulture.already_consumed": "这具尸体已经被吃过了。",
+  "hud.vulture.already_consumed": "这具尸体已经被啃食干净了。",
 
 
-  "item.noellesroles.fake_revolver": "假左轮手枪",
+  "item.noellesroles.fake_revolver": "仿真左轮手枪",
   "item.noellesroles.master_key": "万能钥匙",
-  "item.noellesroles.fake_knife": "假匕首",
+  "item.noellesroles.fake_knife": "仿真匕首",
   "item.noellesroles.defense_vial": "去毒试剂",
   "item.noellesroles.trapper_report": "陷阱通报",
   "item.noellesroles.defense_vial.tooltip": "右键点击食物/饮品托盘以使用\n清除托盘上已施加的毒药\n让食用的玩家可以额外承受一次伤害。",
   "item.noellesroles.delusion_vial": "幻觉试剂",
   "item.noellesroles.delusion_vial.tooltip": "右键点击食物/饮品托盘以使用\n使误食的玩家获得假中毒\n误以为自己中毒，但不会造成任何实际后果。",
   "item.noellesroles.role_mine": "身份地雷",
-  "item.noellesroles.role_mine.tooltip": "右键点击放置在地板或天花板上。\n对其他玩家不可见，无论是放置后的地雷还是角色手中持有地雷。",
+  "item.noellesroles.role_mine.tooltip": "右键点击放置在地板或天花板上。\n对其他玩家不可见，无论是放置后的地雷还是手中持有地雷。",
 
-  "death_reason.wathe.gun_shot": "被子弹击中。",
-  "death_reason.wathe.knife_stab": "被刀刺死！",
-  "death_reason.wathe.generic": "未知。",
-  "death_reason.wathe.bat_hit": "遭受钝器重击！",
-  "death_reason.wathe.grenade": "爆炸！",
-  "death_reason.wathe.poison": "中毒！",
-  "death_reason.wathe.fell_out_of_train": "被列车碾死。",
-  "death_reason.noellesroles.voodoo": "巫毒魔法。",
-  "death_reason.noellesroles.modded_backfire": "内疚而死。",
+  "death_reason.wathe.gun_shot": "被左轮射杀",
+  "death_reason.wathe.knife_stab": "被匕首刺死",
+  "death_reason.wathe.generic": "未知",
+  "death_reason.wathe.bat_hit": "遭受钝器重击",
+  "death_reason.wathe.grenade": "被手雷炸死",
+  "death_reason.wathe.poison": "中毒而亡",
+  "death_reason.wathe.fell_out_of_train": "被列车碾死",
+  "death_reason.noellesroles.voodoo": "巫毒魔法",
+  "death_reason.noellesroles.modded_backfire": "因愧疚而自杀",
 
-  "tip.phantom": "按下 %s 键来隐形！",
-  "tip.recaller.place": "按下 %s 键来保存你的位置！",
-  "tip.recaller.teleport": "按下 %s 键来传送至保存的位置！",
-  "tip.vulture": "已吃掉尸体 %s/%s。",
-  "tip.recaller.not_enough_money": "需要 100\uE781 来进行传送。",
+  "tip.phantom": "按下 %s 键来隐形",
+  "tip.recaller.place": "按下 %s 键来保存你的位置",
+  "tip.recaller.teleport": "按下 %s 键来传送至保存的位置",
+  "tip.vulture": "已吃掉尸体 %s/%s",
+  "tip.recaller.not_enough_money": "需要 100\uE781 来进行传送",
   "tip.selected": "已选中",
   "tip.noellesroles.cooldown": "能力在 %s 秒后可用",
-  "tip.master_key_invisible_count": "当人数少于 %s 时，万能钥匙会显示为撬锁器。",
-  "tip.master_key_invisible": "万能钥匙会显示为撬锁器。",
-  "tip.trapper.caught": "你的陷阱抓到了 %s 名玩家。他们的身份是:",
+  "tip.master_key_invisible_count": "乘客人数少于 %s 人时，万能钥匙显示为撬锁器",
+  "tip.master_key_invisible": "万能钥匙显示为撬锁器",
+  "tip.trapper.caught": "你使用身份地雷捕获了 %s 名乘客的信息，他们的身份是:",
 
-  "subtitles.noellesroles.role_mine_beep": "身份地雷激活"
+  "subtitles.noellesroles.role_mine_beep": "身份地雷发出了哔哔声"
 }
 
 
