@@ -39,6 +39,10 @@ public class RoleMineEntity extends Entity {
     public void tick() {
         super.tick();
         if (!getWorld().isClient) {
+            if (!GameWorldComponent.KEY.get(getWorld()).isRunning()) {
+                discard();
+                return;
+            }
             if (previouslyCaught.size() >= 3) {
                 discard();
                 GameWorldComponent gameWorldComponent = GameWorldComponent.KEY.get(getWorld());
