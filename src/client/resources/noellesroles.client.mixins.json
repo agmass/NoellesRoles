@@ -17,10 +17,12 @@
     "guesser.GuesserScreenDoNotClose",
     "guesser.GuesserScreenMixin",
     "guesser.GuesserSuggestorMixin",
+    "infected.InfectedHudMixin",
     "morphling.MorphlingRendererMixin",
     "morphling.MorphlingRoleNameRendererMixin",
     "morphling.MorphlingScreenMixin",
     "noisemaker.NoisemakerShopMixin",
+    "phantom.PhantomHidePsychosisItems",
     "phantom.PhantomHudMixin",
     "phantom.PhantomRattatoulieMixin",
     "recaller.RecallerHudMixin",
@@ -39,6 +41,7 @@
     "requireAnnotations": true
   },
   "mixins": [
+    "StepSoundMixin",
     "StoreRendererMixin",
     "bartender.DefenseVialViewMixin",
     "conductor.MasterKeyHudMixin",

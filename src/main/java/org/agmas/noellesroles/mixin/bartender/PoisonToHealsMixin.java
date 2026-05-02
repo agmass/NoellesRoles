@@ -39,6 +39,7 @@ public abstract class PoisonToHealsMixin {
             if (player.getWorld().getPlayerByUuid(poisoner) == null) return;
             BartenderPlayerComponent bartenderPlayerComponent = BartenderPlayerComponent.KEY.get(player);
             bartenderPlayerComponent.giveArmor();
+            PlayerPoisonComponent.KEY.get(player).reset();
             ci.cancel();
         }
     }

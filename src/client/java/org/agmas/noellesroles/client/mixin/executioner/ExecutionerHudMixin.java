@@ -22,6 +22,7 @@ import org.agmas.noellesroles.Noellesroles;
 import org.agmas.noellesroles.client.NoellesrolesClient;
 import org.agmas.noellesroles.coroner.BodyDeathReasonComponent;
 import org.agmas.noellesroles.executioner.ExecutionerPlayerComponent;
+import org.agmas.noellesroles.infected.InfectedPlayerComponent;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.Shadow;
 import org.spongepowered.asm.mixin.injection.At;
@@ -49,6 +50,16 @@ public abstract class ExecutionerHudMixin {
             context.getMatrices().translate((float) context.getScaledWindowWidth() / 2.0F, (float) context.getScaledWindowHeight() / 2.0F + 6.0F, 0.0F);
             context.getMatrices().scale(0.6F, 0.6F, 1.0F);
             Text name = Text.translatable("hud.executioner.target", MinecraftClient.getInstance().player.networkHandler.getPlayerListEntry(executionerPlayerComponent.target).getProfile().getName());
+            context.drawTextWithShadow(renderer, name, -renderer.getWidth(name) / 2, 32, Colors.RED);
+
+            context.getMatrices().pop();
+        }
+        if (InfectedPlayerComponent.KEY.get(player).infectedTicks > 0 && WatheClient.isPlayerSpectatingOrCreative()) {
+            if (NoellesrolesClient.target == null) return;
+            context.getMatrices().push();
+            context.getMatrices().translate((float) context.getScaledWindowWidth() / 2.0F, (float) context.getScaledWindowHeight() / 2.0F + 12.0F, 0.0F);
+            context.getMatrices().scale(0.6F, 0.6F, 1.0F);
+            Text name = Text.translatable("announcement.role.noellesroles.infected");
             context.drawTextWithShadow(renderer, name, -renderer.getWidth(name) / 2, 32, Colors.RED);
 
             context.getMatrices().pop();

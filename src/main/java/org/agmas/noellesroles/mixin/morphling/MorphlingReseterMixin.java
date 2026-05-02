@@ -12,6 +12,7 @@ import net.minecraft.network.packet.CustomPayload;
 import net.minecraft.server.network.ServerPlayerEntity;
 import net.minecraft.server.world.ServerWorld;
 import org.agmas.noellesroles.executioner.ExecutionerPlayerComponent;
+import org.agmas.noellesroles.infected.InfectedPlayerComponent;
 import org.agmas.noellesroles.morphling.MorphlingPlayerComponent;
 import org.agmas.noellesroles.recaller.RecallerPlayerComponent;
 import org.agmas.noellesroles.voodoo.VoodooPlayerComponent;
@@ -38,6 +39,7 @@ public abstract class MorphlingReseterMixin {
         ((VoodooPlayerComponent)VoodooPlayerComponent.KEY.get(player)).reset();
         (RecallerPlayerComponent.KEY.get(player)).reset();
         (VulturePlayerComponent.KEY.get(player)).reset();
+        (InfectedPlayerComponent.KEY.get(player)).reset();
         (ExecutionerPlayerComponent.KEY.get(player)).reset();
     }
 }

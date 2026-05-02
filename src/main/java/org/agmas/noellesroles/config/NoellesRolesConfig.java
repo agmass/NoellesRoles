@@ -8,6 +8,7 @@ import net.fabricmc.loader.api.FabricLoader;
 import net.minecraft.util.Identifier;
 import org.agmas.noellesroles.Noellesroles;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class NoellesRolesConfig {
@@ -49,6 +50,27 @@ public class NoellesRolesConfig {
     @SerialEntry(comment = "Price of the Bartender's Defense Vial.")
     public int defenseVialPrice = 100;
 
+    @SerialEntry(comment = "How long Defence Vials last (in ticks). -1 = infinite")
+    public int defenseMaximumTime = -1;
+
     @SerialEntry(comment = "Price of the Trapper's Role Mine.")
     public int roleMinePrice = 100;
+
+    @SerialEntry(comment = "How far an introvert must be from other players to see people in Instinct.")
+    public int introvertDisableRange = 20;
+    @SerialEntry(comment = "How long the Infected's poison takes to kill a target. (default = 1100 ticks)")
+    public int infectedKillTime = 1100;
+    @SerialEntry(comment = "How likely someone who is infected will cough every second of 100. (default = 5%)")
+    public int infectedCoughChance = 5;
+
+    @SerialEntry(comment = "If players with the guesser modifier can use instinct.")
+    public boolean guesserCanUseInstinct = true;
+
+    @SerialEntry(comment = "Trappers see people's names rather than roles")
+    public boolean trapperSeesNames = false;
+    @SerialEntry(comment = "Recons see people's names rather than roles")
+    public boolean reconsSeeNames = false;
+
+    @SerialEntry(comment = "If the Executioner can pick up dropped guns.")
+    public boolean executionCanPickUpGun = true;
 }

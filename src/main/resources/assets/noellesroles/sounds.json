@@ -4,5 +4,11 @@
     "sounds": [
       "noellesroles:role_mine_beep"
     ]
+  },
+  "cough": {
+    "subtitle": "subtitles.noellesroles.cough",
+    "sounds": [
+      "noellesroles:cough"
+    ]
   }
 }

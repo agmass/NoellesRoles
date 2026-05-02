@@ -1,6 +1,6 @@
 {
   "key.noellesroles.ability": "Ability",
-  
+
   "announcement.goals.noellesroles.jester": "Find and co-operate with the Killers.",
   "announcement.role.noellesroles.jester": "Jester",
 
@@ -57,11 +57,19 @@
   "announcement.goals.noellesroles.mimic": "You look like a killer cohort to other killers!",
   "announcement.role.noellesroles.mimic": "Mimic",
 
+  "announcement.goals.noellesroles.recon": "Find player's roles.",
+  "announcement.role.noellesroles.recon": "Recon",
+
+  "announcement.goals.noellesroles.infected": "Infect the entire train.",
+  "announcement.role.noellesroles.infected": "Infected",
+
   "announcement.modifier.noellesroles.tiny": "Tiny",
   "announcement.modifier.noellesroles.chameleon": "Chameleon",
   "announcement.modifier.noellesroles.guesser": "Guesser",
   "announcement.modifier.noellesroles.graverobber": "Graverobber",
   "announcement.modifier.noellesroles.feather": "Feather",
+  "announcement.modifier.noellesroles.introvert": "Introvert",
+  "announcement.modifier.noellesroles.stealth": "Stealthy",
 
 
   "announcement.goals.noellesroles.better_vigilante": "Uhhhhhhhhhhhhh",
@@ -85,6 +93,7 @@
   "item.noellesroles.role_mine.tooltip": "Right click to Place down on Floors or Ceilings.\nInvisible to other players, both placed and in hand.",
 
   "death_reason.wathe.gun_shot": "a bullet.",
+  "death_reason.noellesroles.infection": "the virus.",
   "death_reason.wathe.knife_stab": "a knife!",
   "death_reason.wathe.generic": "unknown causes.",
   "death_reason.wathe.bat_hit": "blunt force!",
@@ -95,6 +104,7 @@
   "death_reason.noellesroles.modded_backfire": "guilt.",
 
   "tip.phantom": "Use %s to go invisible!",
+  "tip.infected": "Use %s to infect a player!",
   "tip.recaller.place": "Use %s to save your location!",
   "tip.recaller.teleport": "Use %s to teleport!",
   "tip.vulture": "%s/%s bodies eaten.",
@@ -104,6 +114,8 @@
   "tip.master_key_invisible_count": "Master Keys look like lockpicks with less than %s people.",
   "tip.master_key_invisible": "Master Keys look like lockpicks.",
   "tip.trapper.caught": "You caught %s players in your trap. Their roles were:",
+  "tip.trapper.caught_names": "You caught %s players in your trap. Their names were:",
 
-  "subtitles.noellesroles.role_mine_beep": "Role Mine Beeps"
+  "subtitles.noellesroles.role_mine_beep": "Role Mine Beeps",
+  "subtitles.noellesroles.cough": "Cough"
 }

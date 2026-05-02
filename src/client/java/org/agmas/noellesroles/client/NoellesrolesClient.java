@@ -1,6 +1,8 @@
 package org.agmas.noellesroles.client;
 
 import com.google.common.collect.Maps;
+import com.mojang.blaze3d.platform.GlStateManager;
+import com.mojang.blaze3d.systems.RenderSystem;
 import dev.doctor4t.ratatouille.util.TextUtils;
 import dev.doctor4t.wathe.api.Role;
 import dev.doctor4t.wathe.api.WatheRoles;
@@ -16,25 +18,33 @@ import net.fabricmc.fabric.api.client.item.v1.ItemTooltipCallback;
 import net.fabricmc.fabric.api.client.keybinding.v1.KeyBindingHelper;
 import net.fabricmc.fabric.api.client.networking.v1.ClientPlayNetworking;
 import net.fabricmc.fabric.api.client.rendering.v1.EntityRendererRegistry;
+import net.fabricmc.fabric.api.client.rendering.v1.HudRenderCallback;
 import net.fabricmc.fabric.api.networking.v1.PacketByteBufs;
 import net.fabricmc.loader.impl.util.log.Log;
 import net.fabricmc.loader.impl.util.log.LogCategory;
 import net.minecraft.client.MinecraftClient;
 import net.minecraft.client.network.PlayerListEntry;
 import net.minecraft.client.option.KeyBinding;
+import net.minecraft.client.render.RenderLayer;
 import net.minecraft.client.render.entity.FlyingItemEntityRenderer;
 import net.minecraft.client.util.InputUtil;
+import net.minecraft.entity.Entity;
 import net.minecraft.entity.player.PlayerEntity;
+import net.minecraft.entity.projectile.ProjectileUtil;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.network.PacketByteBuf;
 import net.minecraft.text.Style;
 import net.minecraft.text.Text;
+import net.minecraft.util.Identifier;
+import net.minecraft.util.hit.EntityHitResult;
+import net.minecraft.util.hit.HitResult;
 import org.agmas.noellesroles.AbilityPlayerComponent;
 import org.agmas.noellesroles.ModItems;
 import org.agmas.noellesroles.NoellesRolesEntities;
 import org.agmas.noellesroles.Noellesroles;
 import org.agmas.noellesroles.client.renderer.RoleMineEntityRenderer;
+import org.agmas.noellesroles.infected.InfectedPlayerComponent;
 import org.agmas.noellesroles.packet.AbilityC2SPacket;
 import org.agmas.noellesroles.packet.MorphC2SPacket;
 import org.agmas.noellesroles.packet.VultureEatC2SPacket;
@@ -79,6 +89,16 @@ public class NoellesrolesClient implements ClientModInitializer {
                     if (gameWorldComponent.isRole(MinecraftClient.getInstance().player, Noellesroles.VULTURE)) {
                         if (targetBody == null) return;
                         ClientPlayNetworking.send(new VultureEatC2SPacket(targetBody.getUuid()));
+                        return;
+                    }
+                    if (gameWorldComponent.isRole(MinecraftClient.getInstance().player, Noellesroles.INFECTED)) {
+                        HitResult lineWidth = ProjectileUtil.getCollision(MinecraftClient.getInstance().player, (entity) -> entity instanceof PlayerEntity, 2.0F);
+                        if (lineWidth instanceof EntityHitResult entityHitResult) {
+                            Entity var16 = entityHitResult.getEntity();
+                            if (var16 instanceof PlayerEntity target) {
+                                ClientPlayNetworking.send(new VultureEatC2SPacket(target.getUuid()));
+                            }
+                        }
                         return;
                     }
                     ClientPlayNetworking.send(new AbilityC2SPacket());

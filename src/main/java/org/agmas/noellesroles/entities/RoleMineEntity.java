@@ -20,7 +20,9 @@ import net.minecraft.util.Formatting;
 import net.minecraft.util.Identifier;
 import net.minecraft.world.World;
 import org.agmas.harpymodloader.Harpymodloader;
+import org.agmas.noellesroles.ConfigWorldComponent;
 import org.agmas.noellesroles.Noellesroles;
+import org.agmas.noellesroles.config.NoellesRolesConfig;
 
 import java.util.ArrayList;
 import java.util.Collections;
@@ -55,12 +57,32 @@ public class RoleMineEntity extends Entity {
                 ItemStack trapperReport = Items.PAPER.getDefaultStack();
                 trapperReport.set(DataComponentTypes.CUSTOM_NAME, Text.translatable("item.noellesroles.trapper_report").formatted(Formatting.RESET).formatted(Formatting.GRAY));
                 List<Text> loreLines = new ArrayList<>();
-                loreLines.add(Text.translatable("tip.trapper.caught", previouslyCaught.size()).formatted(Formatting.RESET).withColor(Colors.GREEN));
+                boolean showRoles = true;
+                if (NoellesRolesConfig.HANDLER.instance().reconsSeeNames && gameWorldComponent.isRole(ownerEntity, Noellesroles.RECON)) {
+                    showRoles = false;
+                }
+                if (NoellesRolesConfig.HANDLER.instance().trapperSeesNames && gameWorldComponent.isRole(ownerEntity, Noellesroles.TRAPPER)) {
+                    showRoles = false;
+                }
+                if (showRoles) {
+                    loreLines.add(Text.translatable("tip.trapper.caught_names", previouslyCaught.size()).formatted(Formatting.RESET).withColor(Colors.GREEN));
+                } else {
+                    loreLines.add(Text.translatable("tip.trapper.caught", previouslyCaught.size()).formatted(Formatting.RESET).withColor(Colors.GREEN));
+                }
                 Collections.shuffle(previouslyCaught);
-                for (UUID uuid1 : previouslyCaught) {
-                    Role role = gameWorldComponent.getRole(uuid1);
-                    if (role == null) continue;
-                    loreLines.add(Harpymodloader.getRoleName(role).withColor(role.color()));
+
+                if (showRoles) {
+                    for (UUID uuid1 : previouslyCaught) {
+                        Role role = gameWorldComponent.getRole(uuid1);
+                        if (role == null) continue;
+                        loreLines.add(Harpymodloader.getRoleName(role).withColor(role.color()));
+                    }
+                } else {
+                    for (UUID uuid1 : previouslyCaught) {
+                        PlayerEntity player = getWorld().getPlayerByUuid(uuid1);
+                        if (player == null) continue;
+                        loreLines.add(player.getName());
+                    }
                 }
                 ownerEntity.playSoundToPlayer(SoundEvents.BLOCK_NOTE_BLOCK_BELL.value(), SoundCategory.MASTER,1,1);
                 LoreComponent loreComponent = new LoreComponent(loreLines);

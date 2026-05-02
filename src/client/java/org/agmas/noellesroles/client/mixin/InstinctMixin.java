@@ -13,14 +13,19 @@ import net.fabricmc.fabric.api.client.networking.v1.ClientPlayNetworking;
 import net.fabricmc.loader.impl.util.log.Log;
 import net.fabricmc.loader.impl.util.log.LogCategory;
 import net.minecraft.client.MinecraftClient;
+import net.minecraft.client.network.AbstractClientPlayerEntity;
 import net.minecraft.client.option.KeyBinding;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.player.PlayerEntity;
+import net.minecraft.util.Colors;
 import net.minecraft.util.math.MathHelper;
+import org.agmas.harpymodloader.component.WorldModifierComponent;
+import org.agmas.noellesroles.ConfigWorldComponent;
 import org.agmas.noellesroles.Noellesroles;
 import org.agmas.noellesroles.bartender.BartenderPlayerComponent;
 import org.agmas.noellesroles.client.NoellesrolesClient;
 import org.agmas.noellesroles.executioner.ExecutionerPlayerComponent;
+import org.agmas.noellesroles.infected.InfectedPlayerComponent;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.Shadow;
 import org.spongepowered.asm.mixin.injection.At;
@@ -67,12 +72,49 @@ public abstract class InstinctMixin {
             }
         }
         if (target instanceof PlayerEntity) {
+            WorldModifierComponent worldModifierComponent = WorldModifierComponent.KEY.get(MinecraftClient.getInstance().player.getWorld());
+            if (worldModifierComponent.isModifier((PlayerEntity) target, Noellesroles.STEALTH)) {
+                if (target.distanceTo(MinecraftClient.getInstance().player) < 10) {
+                    cir.setReturnValue(-1);
+                    cir.cancel();
+                    return;
+                }
+            }
+            if (gameWorldComponent.isRole(MinecraftClient.getInstance().player, Noellesroles.INFECTED)) {
+                if (InfectedPlayerComponent.KEY.get(target).infectedTicks > 0) {
+                    cir.setReturnValue(Color.GREEN.getRGB());
+                }
+            }
+            if (worldModifierComponent.isModifier(MinecraftClient.getInstance().player, Noellesroles.INTROVERT) && !MinecraftClient.getInstance().player.isSpectator()) {
+                boolean introvertEnabled = true;
+                for (AbstractClientPlayerEntity player : MinecraftClient.getInstance().world.getPlayers()) {
+                    if (player.isSpectator()) continue;
+                    if (MinecraftClient.getInstance().player.isSpectator()) continue;
+                    if (player.equals(MinecraftClient.getInstance().player)) continue;
+                    if (player.distanceTo(MinecraftClient.getInstance().player) < ConfigWorldComponent.KEY.get(MinecraftClient.getInstance().world).introvertRange) {
+                        introvertEnabled = false;
+                        break;
+                    }
+                }
+                if (introvertEnabled) {
+                    cir.setReturnValue(Colors.BLUE);
+                }
+            }
+            if (worldModifierComponent.isModifier(MinecraftClient.getInstance().player, Noellesroles.GUESSER) && !ConfigWorldComponent.KEY.get(MinecraftClient.getInstance().world).guesserCanUseInstinct) {
+                if (gameWorldComponent.getRole((PlayerEntity) target).isInnocent()) {
+                    cir.setReturnValue(-1);
+                }
+            }
             if (gameWorldComponent.isRole(MinecraftClient.getInstance().player, Noellesroles.EXECUTIONER)) {
                 ExecutionerPlayerComponent executionerPlayerComponent = (ExecutionerPlayerComponent) ExecutionerPlayerComponent.KEY.get((PlayerEntity) MinecraftClient.getInstance().player);
                 if (executionerPlayerComponent.target.equals(target.getUuid())) {
                     cir.setReturnValue(Color.YELLOW.getRGB());
                     cir.cancel();
                 }
+            }
+            if (gameWorldComponent.isRole(MinecraftClient.getInstance().player, Noellesroles.INFECTED) && WatheClient.isInstinctEnabled()) {
+                cir.setReturnValue(Color.PINK.getRGB());
+                cir.cancel();
             }
             if (gameWorldComponent.isRole(MinecraftClient.getInstance().player, Noellesroles.JESTER) && WatheClient.isInstinctEnabled()) {
                     cir.setReturnValue(Color.PINK.getRGB());
