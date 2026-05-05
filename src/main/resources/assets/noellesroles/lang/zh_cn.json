@@ -57,11 +57,19 @@
   "announcement.goals.noellesroles.mimic": "杀手会误以为你是同伙，但你所属平民阵营。",
   "announcement.role.noellesroles.mimic": "模仿者",
 
+  "announcement.goals.noellesroles.recon": "去发现玩家的身份！",
+  "announcement.role.noellesroles.recon": "侦查员",
+
+  "announcement.goals.noellesroles.infected": "感染整个列车。",
+  "announcement.role.noellesroles.infected": "疫使",
+
   "announcement.modifier.noellesroles.tiny": "矮子",
   "announcement.modifier.noellesroles.chameleon": "变色龙",
   "announcement.modifier.noellesroles.guesser": "猜测者",
   "announcement.modifier.noellesroles.graverobber": "盗墓贼",
   "announcement.modifier.noellesroles.feather": "轻灵",
+  "announcement.modifier.noellesroles.introvert": "内敛",
+  "announcement.modifier.noellesroles.stealth": "鬼祟",
 
 
   "announcement.goals.noellesroles.better_vigilante": "呃——————",
@@ -85,6 +93,7 @@
   "item.noellesroles.role_mine.tooltip": "右键点击放置在地板或天花板上。\n对其他玩家不可见，无论是放置后的地雷还是手中持有地雷。",
 
   "death_reason.wathe.gun_shot": "被左轮射杀",
+  "death_reason.noellesroles.infection": "病毒感染",
   "death_reason.wathe.knife_stab": "被匕首刺死",
   "death_reason.wathe.generic": "未知",
   "death_reason.wathe.bat_hit": "遭受钝器重击",
@@ -95,6 +104,7 @@
   "death_reason.noellesroles.modded_backfire": "因愧疚而自杀",
 
   "tip.phantom": "按下 %s 键来隐形",
+  "tip.infected": "按下 %s 键感染一名玩家!",
   "tip.recaller.place": "按下 %s 键来保存你的位置",
   "tip.recaller.teleport": "按下 %s 键来传送至保存的位置",
   "tip.vulture": "已吃掉尸体 %s/%s",
@@ -104,8 +114,10 @@
   "tip.master_key_invisible_count": "乘客人数少于 %s 人时，万能钥匙显示为撬锁器",
   "tip.master_key_invisible": "万能钥匙显示为撬锁器",
   "tip.trapper.caught": "你使用身份地雷捕获了 %s 名乘客的信息，他们的身份是:",
+  "tip.trapper.caught_names": "你的陷阱捕捉了 %s 名玩家。他们的名字是:",
 
-  "subtitles.noellesroles.role_mine_beep": "身份地雷发出了哔哔声"
+  "subtitles.noellesroles.role_mine_beep": "身份地雷发出了哔哔声",
+  "subtitles.noellesroles.cough": "咳嗽"
 }
 
 
