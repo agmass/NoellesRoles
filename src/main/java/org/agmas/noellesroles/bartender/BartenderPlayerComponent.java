@@ -60,7 +60,7 @@ public class BartenderPlayerComponent implements AutoSyncedComponent, ServerTick
                 armor = 0;
             }
 
-            if (NoellesRolesConfig.HANDLER.instance().defenseMaximumTime != 1) {
+            if (NoellesRolesConfig.HANDLER.instance().defenseMaximumTime != -1) {
                 if (armorTicks > NoellesRolesConfig.HANDLER.instance().defenseMaximumTime) {
                     player.getWorld().playSound(player, player.getBlockPos(), WatheSounds.ITEM_PSYCHO_ARMOUR, SoundCategory.MASTER, 5.0F, 1.0F);
                     armor = 0;
