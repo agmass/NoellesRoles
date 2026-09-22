@@ -22,11 +22,13 @@ public class ClearInfectedWithPoisonClearsMixin {
 
     @WrapMethod(method = "setPoisonTicks")
     private void poisonOverride(int ticks, UUID poisoner, Operation<Void> original) {
-        if (player.getWorld().getPlayerByUuid(poisoner) != null) {
-            if (GameWorldComponent.KEY.get(player.getWorld()).isRole(poisoner, Noellesroles.INFECTED)) {
-                InfectedPlayerComponent.KEY.get(player).infector = poisoner;
-                InfectedPlayerComponent.KEY.get(player).infectedTicks = 1;
-                return;
+        if (poisoner != null) {
+            if (player.getWorld().getPlayerByUuid(poisoner) != null) {
+                if (GameWorldComponent.KEY.get(player.getWorld()).isRole(poisoner, Noellesroles.INFECTED)) {
+                    InfectedPlayerComponent.KEY.get(player).infector = poisoner;
+                    InfectedPlayerComponent.KEY.get(player).infectedTicks = 1;
+                    return;
+                }
             }
         }
         original.call(ticks, poisoner);
